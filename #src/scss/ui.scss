@@ -1,5 +1,12 @@
 //<ОСНОВНОЙ БЛОК>====================================================================================================
-
+.social {
+	font-size: 45px;
+	display: flex;
+	justify-content: space-around;
+	&__item {
+		color: #FFF;
+	}
+}
 //</ОСНОВНОЙ БЛОК>====================================================================================================
 
 //<ГОТОВЫЕ КЛАССЫ>====================================================================================================
@@ -26,7 +33,7 @@ ol.counter {
 	counter-reset: item;
 	li {
 		position: relative;
-		padding: 0px 0px 0px 45px;
+		padding: 0 0 0 45px;
 		&:before {
 			counter-increment: item;
 			content: counter(item);
@@ -304,7 +311,7 @@ body.ie {
 }
 .baloon-content.gm-style-iw {
 	opacity: 1;
-	border-radius: 0px !important;
+	border-radius: 0 !important;
 	max-width: 300px !important;
 	padding: 0 !important;
 	left: 0 !important;
