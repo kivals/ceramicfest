@@ -1,52 +1,71 @@
 //====================================================================================================
 .intro {
-  height: 600px;
-  padding-top: 50px;
+  //height: 600px;
+  border: 1px solid #fff;
+  padding-top: 80px;
   &__body {
     display: flex;
+    @media (max-width: $md3+px) {
+      flex-direction: column;
+    }
   }
-
   &__content {
-    flex: 0 1 50%;
     display: flex;
     flex-direction: column;
-    align-items: center;
-  }
-
-  &__main-image {
-
+    color: #fff;
+    flex: 0 0 50%;
+    padding: 0 20px;
   }
 
   &__logo {
-    padding-bottom: 48%;
-    padding-left: 70%;
+    flex: 1 1 auto;
+    padding-bottom: 33%;
+    z-index: -1;
   }
 
   &__text {
     @include adaptiv-value('font-size', 27, 14, 1);
     color: #FFF;
     text-align: center;
+    &:not(:last-child) {
+      margin-bottom: 30/27 * 1em;
+    }
   }
 
   &__labels {
-    align-self: stretch;
     display: flex;
     justify-content: center;
-    flex-wrap: wrap;
+    margin-bottom: 20px;
   }
 
   &__image {
-    padding: 10px;
+    padding: 0 10px;
     img {
-      width: 50px;
-      height: 50px;
+      @include adaptiv-value('height', 70, 30, 1);
+      @include adaptiv-value('width', 70, 30, 1);
     }
-    @media (min-width: $md3+px) {
-      img {
-        width: 70px;
-        height: 70px;
-      }
-    }
+  }
+
+  &__main-image {
+    flex: 0 0 50%;
+    z-index: -1;
+  }
+
+}
+
+.intro-hand {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  &__image {
+    padding-bottom: 87%;
+    opacity: 0.65
+  }
+  @media (max-width: $md3+px) {
+    padding: 0 20%;
+  }
+  @media (max-width: $md4+px) {
+    display: none;
   }
 }
 
