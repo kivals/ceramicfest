@@ -33,7 +33,6 @@
 			position: fixed;
 			display: flex;
 			flex-direction: column;
-			justify-content: flex-end;
 			min-width: 260px;
 			height: 100%;
 			top: 0;
@@ -72,6 +71,7 @@
 		font-weight: 500;
 		z-index: 5;
 		flex: 1 1 auto;
+		margin-bottom: 20px;
 		li {
 			@media (max-width: $md2+px) {
 				&:not(:last-child) {
@@ -84,6 +84,7 @@
 			align-items: center;
 			justify-content: center;
 			flex-wrap: wrap;
+			margin-bottom: 0;
 			li {
 				transition: opacity 0.3s ease 0s;
 				padding: 5px 0;
