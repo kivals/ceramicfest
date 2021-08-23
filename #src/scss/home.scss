@@ -21,6 +21,9 @@
     flex: 1 1 auto;
     padding-bottom: 33%;
     z-index: -1;
+    @media (max-width: $md3+px) {
+      margin-bottom: 20px;
+    }
   }
 
   &__text {

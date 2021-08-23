@@ -33,11 +33,10 @@ $md4: 479.98;
 //<ОБНУЛЕНИЕ, ОБЩИЕ ПАРАМЕТРЫ>===============================================================================================
 @import "null";
 body {
-	background-repeat: no-repeat;
-	background: url(../img/background.webp);
-	background-position: center;
-	background-size: cover;
-	background-attachment: initial;
+	background: url(../img/space-bg.gif);
+	background-size: auto;
+	background-position: 0 0;
+	background-repeat: repeat;
 	color: #000;
 	&._lock {
 		overflow: hidden;
