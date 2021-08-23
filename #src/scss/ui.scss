@@ -1,4 +1,11 @@
 //<ОСНОВНОЙ БЛОК>====================================================================================================
+.title {
+	@include adaptiv-value('font-size', 42, 24, 1);
+	line-height: 1.23;
+	font-weight: 700;
+	text-align: center;
+}
+
 .social {
 	font-size: 45px;
 	display: flex;

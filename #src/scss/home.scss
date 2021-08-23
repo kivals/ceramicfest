@@ -72,7 +72,7 @@
 }
 //====================================================================================================
 
-//=====philosophy===============================================================================================
+//=====PHILOSOPHY===============================================================================================
 .philosophy {
   background-color: #f0f0f0;
   @include adaptiv-value('padding-top', 60, 40, 1);
@@ -101,3 +101,53 @@
 
 
 }
+//====================================================================================================
+
+//======ABOUTUS==============================================================================================
+.aboutus {
+  background-color: #f0f0f0;
+  @include adaptiv-value('padding-top', 60, 40, 1);
+  @include adaptiv-value('padding-bottom', 60, 40, 1);
+  &__container {
+
+  }
+  &__title {
+    margin-bottom: 42/25 * 1em;
+  }
+
+  &__content {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+
+  &__smi {
+    height: 70px;
+    flex: 0 0 25%;
+    padding: 10px;
+    border-right: 1px solid #bebebe;;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    img {
+      max-width: 160px;
+      max-height: 70px;
+    }
+    @media (max-width: $md3+px) {
+      flex: 0 0 50%;
+    }
+    @media (max-width: $md4+px) {
+      flex: 0 0 100%;
+      border-right: none;
+      &:not(:last-child) {
+        margin-bottom: 20px;
+      }
+    }
+  }
+
+  &__image {
+
+  }
+}
+//====================================================================================================
+
