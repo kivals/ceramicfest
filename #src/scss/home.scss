@@ -1,4 +1,4 @@
-//====================================================================================================
+//====INTRO================================================================================================
 .intro {
   //height: 600px;
   border: 1px solid #fff;
@@ -55,7 +55,6 @@
   }
 
 }
-
 .intro-hand {
   display: flex;
   flex-direction: column;
@@ -71,5 +70,34 @@
     display: none;
   }
 }
-
 //====================================================================================================
+
+//=====philosophy===============================================================================================
+.philosophy {
+  background-color: #f0f0f0;
+  @include adaptiv-value('padding-top', 60, 40, 1);
+  @include adaptiv-value('padding-bottom', 60, 40, 1);
+  &__container {
+    @media (min-width: $md3+px) {
+      display: flex;
+      align-items: center;
+    }
+  }
+  &__title {
+    @include adaptiv-value('font-size', 24, 18, 1);
+    text-align: center;
+    padding: 0 5%;
+    font-weight: 700;
+    line-height: 28/24 * 100%;
+    flex: 0 1 40%;
+    @media (max-width: $md3+px) {
+      margin-bottom: 15px;
+    }
+  }
+  &__text {
+    line-height: 1.55em;
+    flex: 0 1 60%;
+  }
+
+
+}
