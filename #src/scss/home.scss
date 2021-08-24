@@ -195,15 +195,48 @@
     padding-bottom: 100%;
   }
   &__description {
-    padding: 16px;
+    padding: 13px;
   }
+  &__footer {
+    display: flex;
+    justify-content: flex-end;
+    padding: 0 13px;
+  }
+  &__expand {
+    background-color: #424242;
+    color: #fff;
+    font-size: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    transition: all 0.6s ease 0s;
+    &.show-hide {
+      transform: rotate(-180deg);
+    }
+    @media (any-hover: hover) {
+      &:hover {
+        background-color: rgba(255, 255, 255, 0.08);
+      }
+    }
+  }
+
 }
 .description-member {
   &__part {
     font-size: 1rem;
     line-height: 140%;
     &_hide {
-      display: none;
+      transition: all 0.6s ease 0s;
+      height: 0;
+      overflow: hidden;
+      opacity: 0;
+      &.show-hide {
+        height: auto;
+        opacity: 1;
+      }
     }
   }
 }

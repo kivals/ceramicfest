@@ -25,6 +25,9 @@
 	}
 }
 
+._icon-expand-arrow:before {
+	content: "\e903";
+}
 ._icon-instagram:before {
 	content: "\e900";
 }
@@ -33,8 +36,4 @@
 }
 ._icon-vk:before {
 	content: "\e902";
-}
-._icon-arrow_expand:before {
-	content: "\e903";
-	color: #8e96b7;
 }
