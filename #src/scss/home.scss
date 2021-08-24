@@ -169,6 +169,10 @@
     justify-content: space-evenly;
     margin: 0 -10px;
   }
+
+  &__show-more {
+    margin: 0 auto;
+  }
 }
 
 .item-member {
@@ -222,6 +226,7 @@
       }
     }
   }
+
 
 }
 .description-member {
