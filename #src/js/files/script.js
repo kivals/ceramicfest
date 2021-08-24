@@ -11,10 +11,20 @@ function ready() {
 }
 
 function showHideDescriptionHandler(target) {
-    console.log('Ehf');
     const card = target.closest('.item-member');
     const expendButton = card.querySelector('.item-member__expand');
     const hideDescriptionNode = card.querySelector('.description-member__part_hide');
     expendButton.classList.toggle('show-hide');
     hideDescriptionNode.classList.toggle('show-hide');
+}
+
+async function loadData(file) {
+    let response = await fetch(file, {
+        method: 'GET'
+    });
+    if (response.ok) {
+        return response.json();
+    } else {
+        alert("Ошибка");
+    }
 }
