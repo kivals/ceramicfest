@@ -155,23 +155,39 @@
 .members {
   @include adaptiv-value('padding-top', 60, 40, 1);
   @include adaptiv-value('padding-bottom', 60, 40, 1);
-
+  &__body {
+    display: flex;
+    flex-direction: column;
+  }
   &__title {
     color: #FFF;
     margin-bottom: 20px;
   }
   &__list {
     background-color: #333;
-    padding: 24px;
     border-radius: 4px;
+    margin: 0 -10px 20px -10px;
+  }
+
+  &__part {
+    padding: 24px;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
-    margin: 0 -10px;
+    &_additional {
+      display: none;
+      &.show {
+        display: flex;
+      }
+    }
   }
 
   &__show-more {
-    margin: 0 auto;
+    align-self: center;
+    &._hold {
+      opacity: 0.4;
+      cursor: not-allowed;
+    }
   }
 }
 
@@ -226,12 +242,10 @@
       }
     }
   }
-
-
 }
 .description-member {
   &__part {
-    font-size: 1rem;
+    font-size: 1em;
     line-height: 140%;
     &_hide {
       transition: all 0.6s ease 0s;
