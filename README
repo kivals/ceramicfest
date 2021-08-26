@@ -1,6 +1,8 @@
 https://material-ui.com/ru/components/cards/
 https://getbootstrap.com/docs/4.0/components/card/
 
+https://html5css.ru/edithtm/index.php
+
 Идеи:
 
 1) зафиксировать фон
@@ -12,3 +14,4 @@ https://getbootstrap.com/docs/4.0/components/card/
 2) зачистить лишнее
 3) По клику по оверлею в меню - закрывать меню
 4) Реализовать order
+5) Сделать навигацию

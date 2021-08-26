@@ -15,6 +15,9 @@ function ready() {
             additionalList.classList.toggle('show');
             target.innerHTML = 'Показать остальных';
         }
+        if (target.classList.contains('billboard__overlay') || target.classList.contains('billboard__button')) {
+            console.log('ddddddddddddddddddddddddddddd');
+        }
     }
 }
 
