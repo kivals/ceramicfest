@@ -16,7 +16,12 @@ function ready() {
             target.innerHTML = 'Показать остальных';
         }
         if (target.classList.contains('billboard__overlay') || target.classList.contains('billboard__button')) {
-            console.log('ddddddddddddddddddddddddddddd');
+            // const imageContainer = target.closest('.billboard__image-item');
+            // const image = imageContainer?.querySelector('img');
+            // const modalWindow = document.querySelector('.program-modal');
+            // //console.log(modalWindow.style.display);
+            // modalWindow.style.display = 'block';
+            // //console.log(image);
         }
     }
 }
