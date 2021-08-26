@@ -15,13 +15,19 @@ function ready() {
             additionalList.classList.toggle('show');
             target.innerHTML = 'Показать остальных';
         }
+        const modalWindow = document.querySelector('.program-modal');
         if (target.classList.contains('billboard__overlay') || target.classList.contains('billboard__button')) {
-            // const imageContainer = target.closest('.billboard__image-item');
-            // const image = imageContainer?.querySelector('img');
-            // const modalWindow = document.querySelector('.program-modal');
-            // //console.log(modalWindow.style.display);
-            // modalWindow.style.display = 'block';
-            // //console.log(image);
+            const imageContainer = target.closest('.billboard__image-item');
+            const targetImage = imageContainer?.querySelector('img');
+            targetImage.classList.add('program-modal__content');
+            const copyOfTargetImage = targetImage.cloneNode();
+            modalWindow.classList.remove('_hide');
+            modalWindow.append(copyOfTargetImage);
+        }
+
+        if (target.classList.contains('program-modal__close')) {
+            modalWindow.classList.add('_hide');
+            modalWindow.querySelector('img').remove();
         }
     }
 }
