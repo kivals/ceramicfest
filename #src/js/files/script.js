@@ -18,6 +18,7 @@ function ready() {
             const additionalList = document.querySelector('.members__list .members__part_additional');
             additionalList.classList.toggle('show');
             target.innerHTML = additionalList.classList.contains('show') ? 'Скрыть' : 'Показать остальных';
+            document.getElementById('members').scrollIntoView();
         }
         const modalWindow = document.querySelector('.program-modal');
         if (target.classList.contains('billboard__overlay') || target.classList.contains('billboard__button')) {
