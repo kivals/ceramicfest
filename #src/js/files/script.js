@@ -4,6 +4,10 @@ function ready() {
     document.addEventListener('click', documentActions);
     async function documentActions(e) {
         const target = e.target;
+        if (target.classList.contains('menu__link') && !target.classList.contains('active')) {
+            _removeClasses(document.querySelectorAll('.menu__link'), "active");
+            target.classList.add('active');
+        }
         if (target.classList.contains('item-member__expand')) {
             showHideDescriptionHandler(target);
         }

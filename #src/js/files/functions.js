@@ -67,7 +67,15 @@ if (iconMenu != null) {
 			menuBody.classList.toggle("_active");
 		}
 	});
+	menuBody.addEventListener("click", function (e) {
+		if (this.classList.contains('_active') && unlock) {
+			body_lock(delay);
+			iconMenu.classList.toggle("_active");
+			menuBody.classList.toggle("_active");
+		}
+	})
 };
+
 function menu_close() {
 	let iconMenu = document.querySelector(".icon-menu");
 	let menuBody = document.querySelector(".menu__body");
