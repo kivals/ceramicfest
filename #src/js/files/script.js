@@ -17,7 +17,7 @@ function ready() {
         } else if (target.classList.contains('members__show-more') && target.classList.contains('loaded')) {
             const additionalList = document.querySelector('.members__list .members__part_additional');
             additionalList.classList.toggle('show');
-            target.innerHTML = 'Показать остальных';
+            target.innerHTML = additionalList.classList.contains('show') ? 'Скрыть' : 'Показать остальных';
         }
         const modalWindow = document.querySelector('.program-modal');
         if (target.classList.contains('billboard__overlay') || target.classList.contains('billboard__button')) {
