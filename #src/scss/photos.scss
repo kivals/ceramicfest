@@ -1,0 +1,13 @@
+//========PHOTOS============================================================================================
+.fest-video {
+  @include adaptiv-value('padding-top', 60, 40, 1);
+  @include adaptiv-value('padding-bottom', 60, 40, 1);
+  background-color: #f0f0f0;
+}
+
+.photos {
+  @include adaptiv-value('padding-top', 60, 40, 1);
+  @include adaptiv-value('padding-bottom', 60, 40, 1);
+  background-color: #999999;
+}
+//====================================================================================================
