@@ -1,0 +1,55 @@
+.team {
+  @include adaptiv-value('padding-top', 60, 40, 1);
+  @include adaptiv-value('padding-bottom', 60, 40, 1);
+
+  &__container {
+    color: #fff;
+  }
+
+  &__title {
+    margin-bottom: 1em;
+  }
+  &__sub-title {
+    @include adaptiv-value('font-size', 24, 16, 1);
+    text-align: center;
+    margin-bottom: 2em;
+    font-weight: 600;
+  }
+  &__body {
+    @media (min-width: $md3+px) {
+      display: flex;
+      flex-wrap: wrap;
+    }
+  }
+
+  &__person {
+    flex: 0 1 50%;
+  }
+}
+
+.person-team {
+  padding: 20px;
+  display: flex;
+  &__photo {
+    border-radius: 10px;
+    overflow: hidden;
+    flex: 0 0 50%;
+    padding-bottom: 68%;
+    margin-right: 15px;
+  }
+  &__info {
+    flex: 0 0 50%;
+  }
+
+  &__name {
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 1em;
+  }
+
+  &__position {
+    font-size: 13px;
+    line-height: 120%;
+    color: rgba(255,255,255,.7);
+  }
+}
