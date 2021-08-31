@@ -1,6 +1,13 @@
 document.addEventListener("DOMContentLoaded", ready);
 
 function ready() {
+    const currentRoute = document.location.pathname + document.location.hash;
+    const routeLinks = document.querySelectorAll('.menu__link');
+    Array.from(routeLinks).forEach(link => {
+        if (link.href.indexOf(currentRoute) !== -1) {
+            link.classList.add('_active');
+        }
+    })
     document.addEventListener('click', documentActions);
     async function documentActions(e) {
         const target = e.target;
