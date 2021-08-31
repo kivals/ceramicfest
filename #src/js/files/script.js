@@ -1,10 +1,10 @@
 document.addEventListener("DOMContentLoaded", ready);
 
 function ready() {
-    const currentRoute = document.location.pathname + document.location.hash;
     const routeLinks = document.querySelectorAll('.menu__link');
     Array.from(routeLinks).forEach(link => {
-        if (link.href.indexOf(currentRoute) !== -1) {
+        const linkUrl = new URL(link.href);
+        if (linkUrl.pathname === document.location.pathname && linkUrl.hash === document.location.hash) {
             link.classList.add('_active');
         }
     })
