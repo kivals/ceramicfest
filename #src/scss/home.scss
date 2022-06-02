@@ -1,19 +1,30 @@
 //====INTRO================================================================================================
 .intro {
-  border-bottom: 1px solid #fff;
-  padding-top: 80px;
-  &__body {
-    display: flex;
-    @media (max-width: $md3+px) {
-      flex-direction: column;
-    }
-  }
   &__content {
     display: flex;
     flex-direction: column;
     color: #fff;
     flex: 0 0 50%;
     padding: 0 20px;
+  }
+
+  &__container {
+    height: 600px;
+    margin-top: 60px;
+    background-image: url("../img/intro/intro.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position-x: center;
+    background-position-y: center;
+    @media (max-width: $md4+px) {
+      height: 450px;
+    }
+    @media (max-width: $md3+px) {
+      height: 500px;
+    }
+    @media (max-width: $md2+px) {
+      margin-top: 0;
+    }
   }
 
   &__logo {
@@ -357,6 +368,21 @@
 
   &__content {
     display: flex;
+  }
+
+  &__reg-link {
+    font-size: 18px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: color .3s ease 0s;
+    &:hover {
+      color: #333;
+    }
+    @media (max-width: $md3+px) {
+      font-size: 15px;
+      font-weight: 600;
+    }
   }
 
   &__images {
