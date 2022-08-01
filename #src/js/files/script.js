@@ -15,6 +15,15 @@ function ready() {
             _removeClasses(document.querySelectorAll('.menu__link'), "_active");
             target.classList.add('_active');
         }
+
+        const historyListBlock = document.querySelector('.history');
+        if (target.closest(".menu__link--history")) {
+            e.preventDefault()
+            historyListBlock.classList.toggle('_active');
+        } else if (!target.closest(".menu__link--history") && historyListBlock.classList.contains("_active")) {
+            historyListBlock.classList.remove('_active');
+        }
+
         if (target.classList.contains('item-member__expand')) {
             showHideDescriptionHandler(target);
         }
