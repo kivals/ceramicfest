@@ -15,6 +15,17 @@ function ready() {
             _removeClasses(document.querySelectorAll('.menu__link'), "_active");
             target.classList.add('_active');
         }
+
+        const historyListBlock = document.querySelector('.history');
+        console.log(!target.closest(".menu__link--history"))
+        console.log(document.querySelector(".menu__link--history").classList.contains("_active"))
+        if (target.closest(".menu__link--history")) {
+            e.preventDefault()
+            historyListBlock.classList.toggle('_active');
+        } else if (!target.closest(".menu__link--history") && historyListBlock.classList.contains("_active")) {
+            historyListBlock.classList.remove('_active');
+        }
+
         if (target.classList.contains('item-member__expand')) {
             showHideDescriptionHandler(target);
         }
