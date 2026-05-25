@@ -97,11 +97,11 @@ async function convertFile(inputFile, outputFile, opts) {
   const outSize = fs.statSync(outputFile).size;
   const saved   = Math.round((1 - outSize / inSize) * 100);
   const sign    = saved >= 0 ? '-' : '+';
-  const bwTag   = opts.grayscale ? '  [grayscale]' : '';
+  const grayscaleTag   = opts.grayscale ? '  [grayscale]' : '';
 
   console.log(
     `  ${path.basename(inputFile).padEnd(40)} → ${path.basename(outputFile)}  ` +
-    `${sign}${Math.abs(saved)}%  (${kb(inSize)} → ${kb(outSize)} KB)${bwTag}`
+    `${sign}${Math.abs(saved)}%  (${kb(inSize)} → ${kb(outSize)} KB)${grayscaleTag}`
   );
 }
 
