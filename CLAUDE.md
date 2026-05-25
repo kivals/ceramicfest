@@ -42,9 +42,13 @@ gulp
 gulp build
 
 # Конвертация изображений в WebP (обязательно перед добавлением новых фото)
-node img-convert.js ./путь/к/папке            # сохраняет рядом с оригиналами
-node img-convert.js ./источник -o ./output    # в отдельную папку
-node img-convert.js ./источник --width 1920   # с ограничением ширины
+node scripts/img-convert.js ./путь/к/папке             # сохраняет рядом с оригиналами
+node scripts/img-convert.js ./источник -o ./output     # в отдельную папку
+node scripts/img-convert.js ./источник --width 1920    # с ограничением ширины
+node scripts/img-convert.js ./источник --grayscale     # чёрно-белые WebP
+# Или через npm:
+npm run img -- ./путь/к/папке
+npm run img:bw -- ./путь/к/папке
 ```
 
 > **Важно:** все новые фото прогонять через `img-convert.js` до добавления в проект. Оригиналы (JPG/PNG/GIF/TIFF) после конвертации удалять. Качество WebP по умолчанию: 82. Папка `photos/` — staging для новых фотографий.
