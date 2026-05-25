@@ -5,6 +5,10 @@
 	"author": "FLS",
 	"private": true,
 	"license": "GNU General Public License (GPL)",
+	"scripts": {
+		"img": "node scripts/img-convert.js",
+		"img:bw": "node scripts/img-convert.js --grayscale"
+	},
 	"devDependencies": {
 		"browser-sync": "latest",
 		"del": "latest",
