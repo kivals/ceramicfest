@@ -4,13 +4,15 @@
  * Конвертирует изображения в WebP с оптимизацией для web.
  *
  * Использование:
- *   node img-convert.js <источник> [опции]
+ *   node scripts/img-convert.js <источник> [опции]
  *
  * Примеры:
- *   node img-convert.js ./photos
- *   node img-convert.js ./photos -o ./output
- *   node img-convert.js ./photos -q 75 --width 1920
- *   node img-convert.js photo.jpg -o ./out
+ *   node scripts/img-convert.js ./photos
+ *   node scripts/img-convert.js ./photos -o ./output
+ *   node scripts/img-convert.js ./photos -q 75 --width 1920
+ *   node scripts/img-convert.js photo.jpg -o ./out
+ *   node scripts/img-convert.js ./img/members --grayscale
+ *   node scripts/img-convert.js photo.jpg -o ./out -g -q 85
  */
 
 const sharp = require('sharp');
@@ -28,15 +30,17 @@ function parseArgs() {
     width: null,
     height: null,
     keepStructure: true,
+    grayscale: false,
   };
 
   for (let i = 0; i < args.length; i++) {
     const arg = args[i];
-    if (arg === '-o' || arg === '--output')   { opts.output = args[++i]; }
-    else if (arg === '-q' || arg === '--quality') { opts.quality = parseInt(args[++i]); }
-    else if (arg === '--width')               { opts.width = parseInt(args[++i]); }
-    else if (arg === '--height')              { opts.height = parseInt(args[++i]); }
-    else if (!arg.startsWith('-'))            { opts.input = arg; }
+    if (arg === '-o' || arg === '--output')        { opts.output = args[++i]; }
+    else if (arg === '-q' || arg === '--quality')  { opts.quality = parseInt(args[++i]); }
+    else if (arg === '--width')                    { opts.width = parseInt(args[++i]); }
+    else if (arg === '--height')                   { opts.height = parseInt(args[++i]); }
+    else if (arg === '-g' || arg === '--grayscale'){ opts.grayscale = true; }
+    else if (!arg.startsWith('-'))                 { opts.input = arg; }
   }
 
   return opts;
@@ -76,6 +80,10 @@ async function convertFile(inputFile, outputFile, opts) {
 
   let pipeline = sharp(inputFile);
 
+  if (opts.grayscale) {
+    pipeline = pipeline.grayscale();
+  }
+
   if (opts.width || opts.height) {
     pipeline = pipeline.resize(opts.width || null, opts.height || null, {
       withoutEnlargement: true,
@@ -89,10 +97,11 @@ async function convertFile(inputFile, outputFile, opts) {
   const outSize = fs.statSync(outputFile).size;
   const saved   = Math.round((1 - outSize / inSize) * 100);
   const sign    = saved >= 0 ? '-' : '+';
+  const bwTag   = opts.grayscale ? '  [grayscale]' : '';
 
   console.log(
     `  ${path.basename(inputFile).padEnd(40)} → ${path.basename(outputFile)}  ` +
-    `${sign}${Math.abs(saved)}%  (${kb(inSize)} → ${kb(outSize)} KB)`
+    `${sign}${Math.abs(saved)}%  (${kb(inSize)} → ${kb(outSize)} KB)${bwTag}`
   );
 }
 
@@ -104,7 +113,7 @@ async function main() {
   const opts = parseArgs();
 
   if (!opts.input) {
-    console.error('Использование: node img-convert.js <файл или папка> [-o <output>] [-q <качество 1-100>] [--width <px>] [--height <px>]');
+    console.error('Использование: node scripts/img-convert.js <файл или папка> [-o <output>] [-q <качество 1-100>] [--width <px>] [--height <px>] [-g | --grayscale]');
     process.exit(1);
   }
 
@@ -123,7 +132,8 @@ async function main() {
   }
 
   const outputBase = opts.output || null;
-  console.log(`\nКонвертация ${files.length} файл(ов) → WebP (quality: ${opts.quality})\n`);
+  const bwNote = opts.grayscale ? ', grayscale' : '';
+  console.log(`\nКонвертация ${files.length} файл(ов) → WebP (quality: ${opts.quality}${bwNote})\n`);
 
   let ok = 0, fail = 0;
   for (const file of files) {
