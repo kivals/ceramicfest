@@ -11,13 +11,15 @@
   &__container {
     height: 600px;
     margin-top: 60px;
-    background-image: url("../img/intro/intro.jpg");
+    background-image: url("../img/intro/2026/desktop.webp");
     background-size: cover;
     background-repeat: no-repeat;
     background-position-x: center;
     background-position-y: center;
     @media (max-width: $md4+px) {
-      height: 300px;
+      height: auto;
+      aspect-ratio: 9 / 16;
+      background-image: url("../img/intro/2026/mobile.webp");
     }
     @media (max-width: $md3+px) {
       height: 500px;

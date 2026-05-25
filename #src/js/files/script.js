@@ -1,6 +1,7 @@
 document.addEventListener("DOMContentLoaded", ready);
 
 function ready() {
+    initMembers();
     const routeLinks = document.querySelectorAll('.menu__link');
     Array.from(routeLinks).forEach(link => {
         const linkUrl = new URL(link.href);
@@ -30,13 +31,13 @@ function ready() {
             showHideDescriptionHandler(target);
         }
         // Обработка нажатия кнопки Показать остальных
-        if (target.classList.contains('members__show-more') && !target.classList.contains('loaded')) {
-            await showOtherMembers(target);
-        } else if (target.classList.contains('members__show-more') && target.classList.contains('loaded')) {
+        if (target.classList.contains('members__show-more')) {
             const additionalList = document.querySelector('.members__list .members__part_additional');
             additionalList.classList.toggle('show');
             target.innerHTML = additionalList.classList.contains('show') ? 'Скрыть' : 'Показать остальных';
-            document.getElementById('members').scrollIntoView();
+            if (!additionalList.classList.contains('show')) {
+                document.getElementById('members').scrollIntoView();
+            }
         }
         const modalWindow = document.querySelector('.program-modal');
         if (target.classList.contains('billboard__overlay') || target.classList.contains('billboard__button')) {
@@ -63,44 +64,21 @@ function showHideDescriptionHandler(target) {
     hideDescriptionNode.classList.toggle('show-hide');
 }
 
-async function showOtherMembers(button) {
-    //подготовка интерфейса перед загрузкой
-    button.classList.add('_hold', 'loaded');
-    const additionalList = document.querySelector('.members__list .members__part_additional');
-    additionalList.classList.add('show');
-    //Загрузка контента
-    const cards = await getMembersCards();
-    if (cards) {
-        addMembersToDocument(cards);
-    }
-    //Подготовка интерфейса после загрузки
-    button.innerHTML = 'Скрыть';
-    button.classList.remove('_hold');
-    button.classList.add('loaded');
-}
+async function initMembers() {
+    const data = await loadData('data/members.json');
+    if (!data || !data.members) return;
 
-/**
- * Получить элементы интерфейса с контентом
- * @return {Promise<[]>}
- */
-async function getMembersCards() {
-    const file = 'data/members.json';
-    const data = await loadData(file);
-    let cards = [];
-    if(data && data.members) {
-        cards = data.members.map(renderMembersCard)
-    }
-    return cards;
-}
+    const mainList = document.querySelector('.members__part_main');
+    const additionalList = document.querySelector('.members__part_additional');
+    if (!mainList || !additionalList) return;
 
-/**
- * Добавить nodes в интерфейс
- * @param membersCard список cards в виде html-разметки
- */
-function addMembersToDocument(membersCard) {
-    const membersList = document.querySelector('.members__list .members__part_additional');
-    membersCard.forEach(card => {
-        membersList.insertAdjacentHTML('beforeend', card);
+    data.members.forEach((member, index) => {
+        const card = renderMembersCard(member);
+        if (index < 3) {
+            mainList.insertAdjacentHTML('beforeend', card);
+        } else {
+            additionalList.insertAdjacentHTML('beforeend', card);
+        }
     });
 }
 
