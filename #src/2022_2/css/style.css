@@ -2265,6 +2265,7 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item.lg-complete .lg-object 
   -webkit-transition: right 0.3s ease 0s;
   -o-transition: right 0.3s ease 0s;
   transition: right 0.3s ease 0s;
+  overflow: scroll;
 }
 
 .history._active {

@@ -2374,7 +2374,7 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item.lg-complete .lg-object 
 .intro__container {
   height: 600px;
   margin-top: 60px;
-  background-image: url("../img/intro/2026/desktop.webp");
+  background-image: url("../img/intro/intro.webp");
   background-size: cover;
   background-repeat: no-repeat;
   background-position-x: center;
@@ -3588,7 +3588,7 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item.lg-complete .lg-object 
   .intro__container {
     height: auto;
     aspect-ratio: 9/16;
-    background-image: url("../img/intro/2026/mobile.webp");
+    background-image: url("../img/intro/intro.webp");
   }
 
   .intro-hand {
