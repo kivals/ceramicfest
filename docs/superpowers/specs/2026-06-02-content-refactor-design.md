@@ -46,14 +46,15 @@
       extras/                     # кастомные HTML-блоки, уникальные для года
   generated/                      # артефакты pre-build, в .gitignore
     2026/
-      intro.html
-      philosophy.html
-      media.html
-      members.html
-      program.html
-      partners.html
-      map.html
-      _sections.html              # список @@include в порядке из sections[]
+      index/                      # namespace страницы (Phase 2 добавит photos/, team/, reviews/)
+        intro.html
+        philosophy.html
+        media.html
+        members.html
+        program.html
+        partners.html
+        map.html
+        _sections.html            # список @@include в порядке из pages.index.sections[]
 scripts/
   build-content.js                # читает seasons/2026.json + members.json,
                                   # рендерит #src/generated/2026/*.html
@@ -65,10 +66,14 @@ scripts/
 {
   "year": 2026,
   "title": "Вне Земли",
-  "sections": [
-    "intro", "philosophy", "media", "members",
-    "program", "partners", "map"
-  ],
+  "pages": {
+    "index": {
+      "sections": [
+        "intro", "philosophy", "media", "members",
+        "program", "partners", "map"
+      ]
+    }
+  },
   "intro": {
     "title": "...",
     "subtitle": "...",
@@ -109,7 +114,7 @@ scripts/
 }
 ```
 
-**Управление порядком и составом секций:** массив `sections[]`. Чтобы убрать блок — убрать строку. Чтобы добавить уникальный — строка `"custom:my-block"`, сборщик подставит `#src/years/2026/extras/my-block.html` вместо генерируемого фрагмента.
+**Управление порядком и составом секций:** массив `pages.index.sections[]`. Чтобы убрать блок — убрать строку. Чтобы добавить уникальный — строка `"custom:my-block"`, сборщик подставит `#src/years/2026/extras/my-block.html` вместо генерируемого фрагмента.
 
 **Программа:** в текущем 2026 закомментирована («Программа будет объявлена»). Поле `status: "announced"` / `"placeholder"` управляет, рендерить ли заглушку или раскрытое расписание (`days[]`). Шаблон `_program.html` обрабатывает оба варианта.
 
@@ -119,16 +124,17 @@ Node-скрипт без рантайма, единственная внешня
 
 Алгоритм:
 1. Прочитать `#src/data/seasons/2026.json`.
-2. Для каждого имени из `sections[]`:
-   - Если имя начинается с `custom:` → пропустить рендеринг, в `_sections.html` записать `@@include('../years/2026/extras/{name}.html')`.
-   - Иначе:
-     - Прочитать `#src/sections/_{name}.html` (Mustache-шаблон).
-     - Для `members` дополнительно загрузить `data/members.json` и положить участников в контекст рендеринга.
-     - Рендер → запись в `#src/generated/2026/{name}.html`.
-     - В `_sections.html` записать `@@include('generated/2026/{name}.html')`.
-3. Записать `#src/generated/2026/_sections.html` — список инклюдов в порядке `sections[]`.
+2. Для каждой страницы из `pages` (Phase 1: только `index`):
+   - Для каждого имени из `pages.{page}.sections[]`:
+     - Если имя начинается с `custom:` → пропустить рендеринг, в `_sections.html` записать `@@include('../years/2026/extras/{name}.html')`.
+     - Иначе:
+       - Прочитать `#src/sections/_{name}.html` (Mustache-шаблон).
+       - Для `members` дополнительно загрузить `data/members.json` и положить участников в контекст рендеринга.
+       - Рендер → запись в `#src/generated/2026/{page}/{name}.html`.
+       - В `_sections.html` записать `@@include('generated/2026/{page}/{name}.html')`.
+   - Записать `#src/generated/2026/{page}/_sections.html` — список инклюдов в порядке `pages.{page}.sections[]`.
 
-Параметр года передаётся через CLI: `node scripts/build-content.js --year 2026`. По умолчанию читает текущий год из переменной окружения или из дефолта в скрипте (на этой фазе — 2026).
+Параметр года передаётся через CLI: `node scripts/build-content.js --year 2026`. По умолчанию читает текущий год из переменной окружения или из дефолта в скрипте (на этой фазе — 2026). Скрипт обходит все страницы из `pages` за один запуск.
 
 ### `index.html` после рефакторинга
 
@@ -137,7 +143,7 @@ Node-скрипт без рантайма, единственная внешня
 <body>
   @@include('_header.html')
   <main>
-    @@include('generated/2026/_sections.html')
+    @@include('generated/2026/index/_sections.html')
   </main>
   @@include('_footer.html')
   @@include('_popup.html')
@@ -187,9 +193,30 @@ Node-скрипт без рантайма, единственная внешня
 3. **Попап участника:** клик по карточке открывает попап с биографией — работает.
 4. **WebP-подмена:** `gulp-webp-html` корректно подставил `<picture>` для новых сгенерированных фрагментов (проверить в DevTools, что грузятся `.webp`).
 5. **Контентная правка:** в `data/seasons/2026.json` поменять имя любого партнёра → BrowserSync пересобирает → имя обновилось в браузере.
-6. **Order правка:** убрать `"map"` из `sections[]` → блок карты исчезает из HTML.
-7. **Escape hatch:** добавить `"custom:test"` в `sections`, создать `years/2026/extras/test.html` с `<div>HELLO</div>` → блок появляется в нужной позиции.
+6. **Order правка:** убрать `"map"` из `pages.index.sections[]` → блок карты исчезает из HTML.
+7. **Escape hatch:** добавить `"custom:test"` в `pages.index.sections[]`, создать `years/2026/extras/test.html` с `<div>HELLO</div>` → блок появляется в нужной позиции.
 8. **Сравнение с прод-сборкой:** результирующий `ceramicfest/index.html` диффится против предыдущего билда — допустимы только различия в whitespace и порядке атрибутов.
+
+## Extensibility (вне scope Phase 1, но контракт фиксируем)
+
+Phase 1 покрывает только `index.html`. Phase 2 (отдельный спек) перенесёт `photos.html`, `team.html`, `reviews.html` на ту же модель без изменений архитектуры. Контракт, который Phase 1 обязан сохранить:
+
+- **Schema namespace per page.** В `seasons/{year}.json` появляется ключ `pages`:
+  ```json
+  "pages": {
+    "index":   { "sections": [...] },
+    "photos":  { "sections": [...] },
+    "team":    { "sections": [...] },
+    "reviews": { "sections": [...] }
+  }
+  ```
+  В Phase 1 присутствует только `pages.index`. Существующий `sections[]` верхнего уровня — это шорткат для `pages.index.sections`; в Phase 2 он мигрирует под `pages.index`.
+- **Generated path namespace per page.** Артефакты лежат в `#src/generated/{year}/{page}/{section}.html` и `#src/generated/{year}/{page}/_sections.html`. В Phase 1 это `#src/generated/2026/index/...`.
+- **Шаблоны секций переиспользуемые.** `_members.html` принимает `mode` (`preview` для главной, `full` для team). Шаблон в `#src/sections/` один, страница выбирает режим через данные.
+- **Escape hatch работает на любой странице.** `"custom:foo"` в `pages.{any}.sections` подключает `#src/years/{year}/extras/foo.html`.
+- **Оркестратор любой страницы** — один и тот же скелет, отличается только путём `@@include('generated/{year}/{page}/_sections.html')`.
+
+Что это даёт: Phase 1 закладывает структуру `generated/2026/index/` (а не `generated/2026/` плоско) и `pages.index` (а не голый `sections[]`), чтобы Phase 2 не требовала переименований и миграции существующих файлов.
 
 ## Next
 
