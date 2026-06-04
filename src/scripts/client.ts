@@ -12,6 +12,25 @@ export function initClient(): void {
       } catch { /* skip bad URLs */ }
     });
 
+    // Mobile burger menu toggle
+    const iconMenu = document.querySelector<HTMLElement>('.icon-menu');
+    const menuBody = document.querySelector<HTMLElement>('.menu__body');
+    if (iconMenu && menuBody) {
+      const toggleMenu = () => {
+        iconMenu.classList.toggle('_active');
+        menuBody.classList.toggle('_active');
+        document.body.classList.toggle('_lock');
+      };
+      iconMenu.addEventListener('click', toggleMenu);
+      menuBody.addEventListener('click', (e) => {
+        if ((e.target as HTMLElement).closest('.menu__link') || e.target === menuBody) {
+          if (menuBody.classList.contains('_active')) {
+            toggleMenu();
+          }
+        }
+      });
+    }
+
     document.addEventListener('click', (e: MouseEvent) => {
       const target = e.target as HTMLElement;
 
