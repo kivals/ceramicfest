@@ -2,3 +2,5 @@
 /ceramicfest/
 /.idea/*
 /docs/superpowers/plans/
+/dist/
+/.astro/
