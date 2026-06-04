@@ -1,4 +1,16 @@
-// Base: reset + mixins + fonts + base typography
-@import '../../#src/scss/null';
-@import '../../#src/scss/mixins';
-@import '../../#src/scss/fonts';
+// Base: mixins + fonts + global variables + reset
+@import 'mixins';
+@import 'fonts';
+@import 'icons';
+
+// Global variables (originally inline in style.scss)
+$fontFamily: "Gilroy";
+$minWidth: 320px;
+$maxWidth: 1440;
+$maxWidthContainer: 1270;
+$md1: $maxWidthContainer + 12;
+$md2: 991.98;
+$md3: 767.98;
+$md4: 479.98;
+
+@import 'null';

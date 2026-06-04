@@ -1,4 +1,8 @@
 import { defineConfig } from 'astro/config';
+import { fileURLToPath } from 'url';
+import path from 'path';
+
+const __dirname = fileURLToPath(new URL('.', import.meta.url));
 
 export default defineConfig({
   outDir: './dist',
@@ -13,6 +17,7 @@ export default defineConfig({
       preprocessorOptions: {
         scss: {
           api: 'modern-compiler',
+          loadPaths: [path.join(__dirname, '#src', 'scss')],
         },
       },
     },
