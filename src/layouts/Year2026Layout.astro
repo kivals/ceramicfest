@@ -1,0 +1,13 @@
+---
+import BaseLayout from './BaseLayout.astro';
+import '../styles/years/2026.scss';
+
+interface Props {
+  year: number;
+  title?: string;
+  pageTitle?: string;
+}
+---
+<BaseLayout {...Astro.props}>
+  <slot />
+</BaseLayout>

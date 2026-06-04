@@ -1,0 +1,35 @@
+---
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import Popup from '../components/Popup.astro';
+import '../styles/global.scss';
+
+interface Props {
+  year: number;
+  title?: string;
+  pageTitle?: string;
+}
+const { year, title = 'Фестиваль Млечный путь', pageTitle } = Astro.props;
+---
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>{pageTitle || title}</title>
+</head>
+<body>
+  <div class="wrapper">
+    <Header year={year} />
+    <main class="page">
+      <slot />
+    </main>
+    <Footer />
+  </div>
+  <Popup />
+  <script>
+    import { initClient } from '../scripts/client';
+    initClient();
+  </script>
+</body>
+</html>
