@@ -1,4 +1,43 @@
 ---
-interface Props { data: any; }
+interface Props {
+  data: {
+    title: string;
+    status: 'placeholder' | 'announced';
+    placeholderText?: string;
+    days?: { date: string; location?: string; events: { html: string }[] }[];
+  };
+}
+const { data } = Astro.props;
 ---
-<!-- stub -->
+<section class="program" id="program">
+  <div class="program-modal _hide">
+    <span class="program-modal__close">×</span>
+  </div>
+  <div class="program__container _container">
+    <h2 class="program__title title">{data.title}</h2>
+    <div class="program__body">
+      {data.status === 'placeholder' && data.placeholderText && (
+        <div class="program__billboard billboard">
+          <div class="billboard__content">
+            <div class="billboard__program">
+              <p set:html={data.placeholderText}></p>
+            </div>
+          </div>
+        </div>
+      )}
+      {data.status === 'announced' && data.days && data.days.map(day => (
+        <div class="program__billboard billboard">
+          <div class="billboard__header">
+            <div class="billboard__date">{day.date}</div>
+            {day.location && <div class="billboard__title">Локация: {day.location}</div>}
+          </div>
+          <div class="billboard__content">
+            <div class="billboard__program">
+              {day.events.map(ev => <p set:html={ev.html}></p>)}
+            </div>
+          </div>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>

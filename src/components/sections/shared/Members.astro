@@ -1,4 +1,63 @@
 ---
-interface Props { data: any; }
+import { loadMembersSplit } from '../../../lib/members';
+
+interface Props {
+  data: { title: string; dataFile: string; previewCount: number; moreButtonLabel: string };
+}
+const { data } = Astro.props;
+const { main, additional } = await loadMembersSplit(data.dataFile, data.previewCount);
 ---
-<!-- stub -->
+<section class="members" id="members">
+  <div class="members__container _container">
+    <div class="members__body">
+      <h3 class="members__title title">{data.title}</h3>
+      <div class="members__list">
+        <div class="members__part members__part_main">
+          {main.map(m => (
+            <div class="members__item item-member">
+              <div class="item-member__body">
+                <div class="item-member__header">
+                  <div class="item-member__name">{m.name}</div>
+                  <div class="item-member__position"></div>
+                </div>
+                <div class="item-member__photo _ibg">
+                  <img src={m.photo} alt={m.altText} />
+                </div>
+                <div class="item-member__description description-member">
+                  <div class="description-member__part" set:html={m.description}></div>
+                  <div class="description-member__part description-member__part_hide" set:html={m.additionalDescription}></div>
+                </div>
+                <div class="item-member__footer">
+                  <button class="item-member__expand _icon-expand-arrow"></button>
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+        <div class="members__part members__part_additional">
+          {additional.map(m => (
+            <div class="members__item item-member">
+              <div class="item-member__body">
+                <div class="item-member__header">
+                  <div class="item-member__name">{m.name}</div>
+                  <div class="item-member__position"></div>
+                </div>
+                <div class="item-member__photo _ibg">
+                  <img src={m.photo} alt={m.altText} />
+                </div>
+                <div class="item-member__description description-member">
+                  <div class="description-member__part" set:html={m.description}></div>
+                  <div class="description-member__part description-member__part_hide" set:html={m.additionalDescription}></div>
+                </div>
+                <div class="item-member__footer">
+                  <button class="item-member__expand _icon-expand-arrow"></button>
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+      <button class="members__show-more btn">{data.moreButtonLabel}</button>
+    </div>
+  </div>
+</section>

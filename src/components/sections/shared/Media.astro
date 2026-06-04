@@ -1,4 +1,18 @@
 ---
-interface Props { data: any; }
+interface Props {
+  data: { title: string; items: { url: string; logo: string; alt: string }[] };
+}
+const { data } = Astro.props;
 ---
-<!-- stub -->
+<section class="aboutus">
+  <div class="aboutus__container _container">
+    <h3 class="aboutus__title title">{data.title}</h3>
+    <div class="aboutus__content">
+      {data.items.map(item => (
+        <a href={item.url} class="aboutus__smi" target="_blank" rel="noopener">
+          <img src={item.logo} alt={item.alt} />
+        </a>
+      ))}
+    </div>
+  </div>
+</section>
