@@ -1,4 +1,19 @@
 ---
-interface Props { data: any; }
+interface Props {
+  data: { title: string; paragraphs: string[] };
+}
+const { data } = Astro.props;
 ---
-<!-- stub -->
+<section class="philosophy" id="philosophy">
+  <div class="philosophy__container _container">
+    <h2 class="philosophy__title">{data.title}</h2>
+    <div class="philosophy__text">
+      {data.paragraphs.map(p => <p>{p}</p>)}
+    </div>
+  </div>
+</section>
+<section class="divider">
+  <div class="divider__container _container">
+    <div class="divider__line"></div>
+  </div>
+</section>
