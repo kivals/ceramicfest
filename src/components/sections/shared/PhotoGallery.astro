@@ -42,3 +42,15 @@ const { data } = Astro.props;
 </section>
 
 <script is:inline src="https://player.vimeo.com/api/player.js"></script>
+<script is:inline src="/js/lightgallery.min.js"></script>
+<script is:inline>
+  document.addEventListener('DOMContentLoaded', () => {
+    document.querySelectorAll('._gallery').forEach((el) => {
+      window.lightGallery(el, {
+        counter: false,
+        selector: 'a',
+        download: false,
+      });
+    });
+  });
+</script>
