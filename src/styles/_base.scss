@@ -15,6 +15,12 @@ $md4: 479.98;
 
 @import 'null';
 
+// Smooth anchor scroll + offset under fixed header
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 80px;
+}
+
 // Body / global layout (originally inline in style.scss)
 body {
   background: url(../img/space-bg.gif);
