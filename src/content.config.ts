@@ -99,9 +99,26 @@ const seasonSchema = z.object({
   }).optional(),
 });
 
+const memberItem = z.object({
+  id: z.number(),
+  name: z.string(),
+  position: z.string().optional(),
+  photo: z.string(),
+  altText: z.string(),
+  description: z.string(),
+  additionalDescription: z.string(),
+});
+
 const seasons = defineCollection({
   type: 'data',
   schema: seasonSchema,
 });
 
-export const collections = { seasons };
+const members = defineCollection({
+  type: 'data',
+  schema: z.object({
+    members: z.array(memberItem),
+  }),
+});
+
+export const collections = { seasons, members };
