@@ -5,104 +5,112 @@
 Статический промо-сайт ежегодного Международного фестиваля современной керамики «Млечный путь» (г. Калуга). Сайт обновляется раз в год: под каждый сезон создаётся отдельная ветка git и обновляются контент, фото и программа.
 
 Текущий сезон: **2026**, выставка «Вне Земли». Основная ветка: `main`.
+Ветка активной разработки: `astro-migration` — идёт миграция с Gulp на Astro (Phase 1).
 
 **Страницы:**
 
-| Файл | Назначение |
+| Маршрут | Назначение |
 |---|---|
-| `index.html` | Главная (философия, участники, программа, партнёры, карта) |
-| `photos.html` | Фотогалерея |
-| `reviews.html` | Отзывы |
-| `team.html` | Участники/команда |
+| `/` | Главная (философия, участники, программа, партнёры, карта) |
+| `/photos` | Фотогалерея |
+| `/reviews` | Отзывы |
+| `/team` | Участники/команда |
 
 ## Tech stack
 
 | Слой | Технология |
 |---|---|
-| Шаблонизация | `gulp-file-include` — директива `@@include` для переиспользуемых фрагментов |
-| Стили | SCSS → autoprefixer → group-media-queries → clean-css (минификация) |
-| Скрипты | Ванильный JS + сторонние библиотеки → uglify-es |
-| Изображения | Конвертация в WebP через `sharp` / `webp-converter`; `gulp-webp-html` и `gulp-webpcss` подставляют WebP-версии автоматически |
-| Dev-сервер | BrowserSync с live-reload |
-| Сборщик | Gulp |
-
-**Сторонние JS-библиотеки** (в `#src/js/libs/`): Swiper, Slick, Isotope, LightGallery, baguetteBox, Tippy, Datepicker, noUiSlider, Typed, SmoothScroll и др.
+| Фреймворк | Astro 5 |
+| Шаблонизация | `.astro` компоненты с TypeScript frontmatter |
+| Стили | SCSS (через `src/styles/`) |
+| Контент | JSON в `src/content/seasons/` и `src/content/members/`, Zod-валидация |
+| Скрипты | Ванильный TypeScript в `src/scripts/client.ts` |
+| Картинки | `scripts/img-convert.js` (sharp) — конвертация в WebP |
+| Dev-сервер | Astro dev (`npm run dev`), HMR |
 
 ## Commands
 
 ```bash
-# Первый запуск (обязательно — нужна точная версия webp-converter)
-npm i
-npm install webp-converter@2.2.3 --save-dev
+npm install
 
-# Разработка — watch + BrowserSync
-gulp
-
-# Продакшн-сборка в папку ceramicfest/
-gulp build
+npm run dev      # http://localhost:4321 с HMR
+npm run build    # продакшн-билд → dist/
+npm run preview  # локальный просмотр dist/
+npm run check    # astro check (TS + .astro lint)
 
 # Конвертация изображений в WebP (обязательно перед добавлением новых фото)
-node scripts/img-convert.js ./путь/к/папке             # сохраняет рядом с оригиналами
-node scripts/img-convert.js ./источник -o ./output     # в отдельную папку
-node scripts/img-convert.js ./источник --width 1920    # с ограничением ширины
-node scripts/img-convert.js ./источник --grayscale     # чёрно-белые WebP
-# Или через npm:
+node scripts/img-convert.js ./путь/к/папке
+node scripts/img-convert.js ./источник -o ./output
+node scripts/img-convert.js ./источник --width 1920
+node scripts/img-convert.js ./источник --grayscale
 npm run img -- ./путь/к/папке
 npm run img:bw -- ./путь/к/папке
 ```
 
-> **Важно:** все новые фото прогонять через `scripts/img-convert.js` до добавления в проект. Оригиналы (JPG/PNG/GIF/TIFF) после конвертации удалять. Качество WebP по умолчанию: 82. Папка `photos/` — staging для новых фотографий.
+> **Важно:** все новые фото прогонять через `scripts/img-convert.js` до добавления в проект. Оригиналы (JPG/PNG/GIF/TIFF) после конвертации удалять. Качество WebP по умолчанию: 82.
 
 ## Architecture
 
 ```
-ceramicfest/          ← собранный сайт (output, не редактировать вручную)
-#src/
-  *.html              ← страницы (index, photos, reviews, team)
-  _*.html             ← переиспользуемые фрагменты: _head, _header, _footer,
-                         _popup, _icons, _js, _pagging
-  scss/
-    style.scss        ← точка входа, импортирует все модули
-    null.scss         ← CSS reset
-    mixins.scss       ← адаптивные миксины (adaptiv-value и др.)
-    common.scss       ← общие стили (типография, контейнер, утилиты)
-    home.scss         ← стили главной страницы
-    header.scss, footer.scss, popup.scss, ...  ← компоненты
-    photos.scss, reviews.scss, team.scss       ← стили страниц
-  js/
-    app.js            ← точка входа JS, подключает файлы из files/
-    vendors.js        ← сборка сторонних библиотек из libs/
-    files/            ← собственные модули: script.js, sliders.js,
-                         forms.js, scroll.js, map.js, functions.js,
-                         dynamic_adapt.js, regular.js
-    libs/             ← сторонние библиотеки (не трогать)
-  data/
-    members.json      ← участники текущего сезона (активный список для сайта)
-    members_all.json  ← общее хранилище всех участников за все годы (мастер-база)
-
-  img/                ← изображения (WebP)
-    intro/2026/       ← фоновые изображения интро (desktop.webp, mobile.webp)
-    members/          ← фото участников
-    partners/, aboutus/, ...
-  2021/ … 2024/       ← архивные версии прошлых сезонов
-scripts/img-convert.js ← скрипт конвертации изображений в WebP (Node.js + sharp)
-gulpfile.js           ← конфигурация Gulp-пайплайна
+dist/                   ← собранный сайт (output astro build, не редактировать)
+public/
+  img/                  ← изображения (WebP), доступны как /img/...
+  fonts/                ← шрифты
+  favicon.png
+  2021/ … 2025/         ← архивные сезоны (замороженная статика)
+src/
+  config.ts             ← CURRENT_SEASON = 2026, ARCHIVE_YEARS
+  env.d.ts              ← типы Astro
+  content/
+    config.ts           ← Zod-схема коллекций
+    seasons/2026.json   ← данные текущего сезона (секции, тексты, программа, партнёры)
+    members/2026.json   ← участники текущего сезона
+    members/all.json    ← мастер-база всех участников за все годы
+  layouts/
+    BaseLayout.astro    ← общий каркас (Header, Footer, Popup, SCSS, client.ts)
+    Year2026Layout.astro ← тема 2026
+  components/
+    Header.astro, Footer.astro, Popup.astro, HistoryWidget.astro
+    sections/shared/    ← Intro, Philosophy, Media, Members, Program,
+                           Partners, Map, PhotoGallery, MembersFull, ReviewsList
+    sections/year-specific/{year}/ ← переопределения секций для конкретного года
+  lib/
+    seasons.ts          ← loadSeason(year)
+    members.ts          ← loadMembersSplit(dataFile, previewCount)
+    sections.ts         ← resolveSection(year, name) — section registry
+  styles/
+    global.scss         ← точка входа: импортирует _base и _components
+    _base.scss          ← mixins, fonts, глобальные переменные, reset
+    _components.scss    ← стили компонентов и страниц
+    years/2026.scss     ← тема-акцент сезона 2026
+  scripts/
+    client.ts           ← ванильный JS: меню, участники toggle, history widget
+  pages/
+    index.astro         ← главная
+    photos.astro
+    team.astro
+    reviews.astro
+scripts/img-convert.js  ← конвертация изображений (Node.js + sharp)
+astro.config.mjs        ← конфиг Astro
 ```
 
 **Данные участников:**
-- `#src/data/members_all.json` — мастер-база, хранит всех участников за все годы; при подготовке нового сезона участников берут отсюда и формируют `members.json`.
-- `#src/data/members.json` — список участников **текущего сезона** (именно его читает сайт).
-Структура записи (`members.json` / `members_all.json`):
+- `src/content/members/all.json` — мастер-база, все участники за все годы.
+- `src/content/members/2026.json` — список участников текущего сезона.
+
+Структура записи:
 ```json
 {
   "id": 4,
   "name": "Имя Фамилия",
   "position": "",
-  "photo": "./img/members/Фамилия.webp",
+  "photo": "/img/members/Фамилия.webp",
   "altText": "Имя Фамилия",
   "description": "Биография...",
   "additionalDescription": "Дополнительно..."
 }
 ```
 
-**Новый сезон** — создать ветку от `main`, обновить контент страниц, `members.json`, фото и программу. Ветки по годам: `2021`, `2022`, `2022_2`, `2023`, `2024`, `2025`, `2026`.
+**Новый сезон** — создать ветку от `main`, обновить `src/content/seasons/{year}.json`, `src/content/members/{year}.json`, фото в `public/img/`, создать `Year{N}Layout.astro` и `src/styles/years/{year}.scss`. Ветки по годам: `2021`, `2022`, `2022_2`, `2023`, `2024`, `2025`, `2026`.
+
+**Phase 2 (будущее)** — динамические маршруты для архивов (`src/pages/[year]/index.astro`), перенос `public/2021/`...`public/2025/` в content collections.
