@@ -1,0 +1,43 @@
+---
+import HistoryWidget from './HistoryWidget.astro';
+
+interface Props { year: number; }
+const { year } = Astro.props;
+---
+<header class="header">
+  <div class="header__content _container">
+    <div class="history">
+      <HistoryWidget currentYear={year} />
+    </div>
+    <div class="header__menu menu">
+      <div class="menu__icon icon-menu">
+        <span></span><span></span><span></span>
+      </div>
+      <nav class="menu__body">
+        <ul class="menu__list">
+          <li><a href="/" class="menu__link">О фестивале</a></li>
+          <li><a href="/reviews" class="menu__link">Отзывы</a></li>
+          <li><a href="/photos" class="menu__link">Фото и видео</a></li>
+          <li><a href="/#program" class="menu__link">Расписание</a></li>
+          <li><a href="/#members" class="menu__link">Участники</a></li>
+          <li><a href="/#partners" class="menu__link">Партнеры</a></li>
+          <li><a href="/team" class="menu__link">Наша команда</a></li>
+          <li><a href="/#map" class="menu__link">Место проведения</a></li>
+          <li class="menu__item-history">
+            <a href="/" class="menu__link menu__link--history">
+              <img width="40" src="/img/history.svg" alt="Иконка списка фестивалей" />
+            </a>
+          </li>
+        </ul>
+        <div class="header__footer">
+          <HistoryWidget currentYear={year} />
+          <div class="header__social social">
+            <a href="https://www.facebook.com/ceramicsfestkaluga/?ref=pages_you_manage" class="social__item _icon-facebook" target="_blank" rel="noopener"></a>
+            <a href="https://vk.com/ceramics_fest_kaluga" class="social__item _icon-vk" target="_blank" rel="noopener"></a>
+            <a href="https://instagram.com/ceramics_fest_kaluga?utm_medium=copy_link" class="social__item _icon-instagram" target="_blank" rel="noopener"></a>
+          </div>
+        </div>
+      </nav>
+    </div>
+  </div>
+</header>

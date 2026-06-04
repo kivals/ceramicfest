@@ -1,0 +1,18 @@
+---
+import { ARCHIVE_YEARS } from '../config';
+
+interface Props {
+  currentYear: number;
+}
+const { currentYear } = Astro.props;
+const entries = ARCHIVE_YEARS.filter(e => e.year !== currentYear);
+---
+<ul class="history__list">
+  {entries.map(e => (
+    <li class="history__item">
+      <a href={`/${e.slug}/`} class="history__link">
+        <img src={e.image} class="history__image" width="250" alt={e.alt} />
+      </a>
+    </li>
+  ))}
+</ul>
