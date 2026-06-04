@@ -5,9 +5,9 @@ import { resolveSection } from '../lib/sections';
 import Year2026Layout from '../layouts/Year2026Layout.astro';
 
 const season = await loadSeason(CURRENT_SEASON);
-const sections = season.pages.index.sections;
+const sections = season.pages.team?.sections ?? [];
 ---
-<Year2026Layout year={season.year} title={`Фестиваль Млечный путь ${season.year}`}>
+<Year2026Layout year={season.year} pageTitle="Команда фестиваля">
   {sections.map(name => {
     const Section = resolveSection(season.year, name);
     return <Section data={(season as any)[name]} />;
