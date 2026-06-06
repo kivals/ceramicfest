@@ -1,7 +1,7 @@
 // Base: mixins + fonts + global variables + reset
-@import 'mixins';
-@import 'fonts';
-@import 'icons';
+@import './legacy/mixins';
+@import './legacy/fonts';
+@import './legacy/icons';
 
 // Global variables (originally inline in style.scss)
 $fontFamily: "Gilroy";
@@ -13,7 +13,7 @@ $md2: 991.98;
 $md3: 767.98;
 $md4: 479.98;
 
-@import 'null';
+@import './legacy/null';
 
 // Smooth anchor scroll + offset under fixed header
 html {

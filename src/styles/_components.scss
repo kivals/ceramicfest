@@ -1,12 +1,12 @@
 // Component styles (header, footer, sections, popup, page-specific)
-@import 'forms';
-@import 'ui';
-@import 'lightgallery';
-@import 'common';
-@import 'header';
-@import 'footer';
-@import 'popup';
-@import 'home';
-@import 'photos';
-@import 'reviews';
-@import 'team';
+@import './legacy/forms';
+@import './legacy/ui';
+@import './legacy/lightgallery';
+@import './legacy/common';
+@import './legacy/header';
+@import './legacy/footer';
+@import './legacy/popup';
+@import './legacy/home';
+@import './legacy/photos';
+@import './legacy/reviews';
+@import './legacy/team';
