@@ -1,0 +1,31 @@
+---
+import ArchiveLayout from '../../layouts/ArchiveLayout.astro';
+import titles from '../../legacy/titles.json';
+import { ARCHIVE_YEARS } from '../../config';
+
+const bodies = import.meta.glob<string>('../../legacy/*/*.body.html', {
+  query: '?raw',
+  import: 'default',
+  eager: true,
+});
+
+const PAGES = ['index', 'photos', 'team', 'reviews'] as const;
+type Page = (typeof PAGES)[number];
+
+export async function getStaticPaths() {
+  const PAGES = ['index', 'photos', 'team', 'reviews'] as const;
+  return ARCHIVE_YEARS.flatMap(({ slug }) =>
+    PAGES.map((page) => ({
+      params: { year: slug, slug: page === 'index' ? undefined : page },
+      props: { slug, page },
+    }))
+  );
+}
+
+const { slug, page } = Astro.props as { slug: keyof typeof titles; page: Page };
+const body = bodies[`../../legacy/${slug}/${page}.body.html`];
+const pageTitle = titles[slug][page];
+---
+<ArchiveLayout slug={slug} pageTitle={pageTitle}>
+  <Fragment set:html={body} />
+</ArchiveLayout>

@@ -1,0 +1,22 @@
+---
+interface Props {
+  slug: string;
+  pageTitle: string;
+}
+const { slug, pageTitle } = Astro.props;
+---
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <title>{pageTitle}</title>
+    <meta charset="UTF-8" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="yandex-verification" content="9c088efdadb9e1ea" />
+    <link rel="stylesheet" href={`/${slug}/css/style.min.css`} />
+    <link rel="shortcut icon" href="/favicon.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  </head>
+  <body>
+    <slot />
+  </body>
+</html>
