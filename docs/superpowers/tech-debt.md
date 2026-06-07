@@ -73,6 +73,22 @@
 - **Как починить:** Удалить атрибут `frameborder` — границ у iframe и так нет по умолчанию в современных браузерах. Если нужна явная — `style="border: 0"`.
 - **Найдено:** 2026-06-04
 
+## `@types/node` отсутствует — `src/lib/members.ts` падает на astro check
+
+- **Где:** `src/lib/members.ts:1,2,14`
+- **Симптом:** `astro check` выдаёт 3 ошибки: `Cannot find module 'node:fs/promises'`, `Cannot find module 'node:path'`, `Cannot find name 'process'`. Билд работает (Vite/Astro своими типами разруливают), но `npm run check` красный.
+- **Почему отложено:** Не блокирует билд и dev-сервер. Простой фикс, но требует одного решения.
+- **Как починить:** `npm i -D @types/node` и добавить `"types": ["node"]` в `tsconfig.json` (или просто установить — Astro подхватит).
+- **Найдено:** 2026-06-07
+
+## Шум `astro check` от legacy JS в `public/*/js/`
+
+- **Где:** `public/{2021,2022,2022_2,2023,2024,2025}/js/{app,vendors}.{js,min.js}`, `public/2026/...`
+- **Симптом:** `astro check` лазит в минифицированные legacy JS архивов и выдаёт ~195 hints/warnings (`is deprecated`, `is declared but never read`). Сигнал в реальном коде тонет в шуме.
+- **Почему отложено:** Это валидно работающий статический ассет под /{year}/, его нельзя удалить — на него ссылаются inline-HTML архивов. TS-проверять его не нужно.
+- **Как починить:** В `tsconfig.json` добавить `"exclude": ["public/**/*.js"]` или в `astro.config.mjs` исключить через `vite.optimizeDeps.exclude` / отдельный `.tsconfig` под check. Минимальный путь — `exclude` в tsconfig.
+- **Найдено:** 2026-06-07
+
 ## Архивные сезоны: set:html shortcut вместо порта в JSON+компоненты
 
 - **Где:** `src/pages/[year]/[...slug].astro`, `src/legacy/{2021,2022,2022_2,2023,2024,2025}/*.body.html`, `src/layouts/ArchiveLayout.astro`, `src/legacy/titles.json`

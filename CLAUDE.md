@@ -5,7 +5,7 @@
 Статический промо-сайт ежегодного Международного фестиваля современной керамики «Млечный путь» (г. Калуга). Сайт обновляется раз в год: под каждый сезон создаётся отдельная ветка git и обновляются контент, фото и программа.
 
 Текущий сезон: **2026**, выставка «Вне Земли». Основная ветка: `main`.
-Сайт мигрирован с Gulp на Astro (Phase 1 завершена в ветке `astro-migration`). Phase 2 — динамические маршруты для архивных сезонов.
+Сайт мигрирован с Gulp на Astro: Phase 1 (текущий сезон) завершена в ветке `astro-migration`, Phase 2 (архивы 2021–2025 через set:html shortcut) — в ветке `phase2-archive-2021`.
 
 **Страницы:**
 
@@ -15,6 +15,7 @@
 | `/photos` | Фотогалерея |
 | `/reviews` | Отзывы |
 | `/team` | Участники/команда |
+| `/{year}/`, `/{year}/{photos,team,reviews}` | Архивы 2021–2025 (inline-HTML через `set:html`) |
 
 ## Tech stack
 
@@ -57,7 +58,7 @@ public/
   img/                  ← изображения (WebP), доступны как /img/...
   fonts/                ← шрифты
   favicon.png
-  2021/ … 2025/         ← архивные сезоны (замороженная статика)
+  2021/ … 2025/         ← архивные ассеты (css/js/img/fonts/data) — HTML вынесены в src/legacy/
 src/
   config.ts             ← CURRENT_SEASON = 2026, ARCHIVE_YEARS
   env.d.ts              ← типы Astro
@@ -66,9 +67,13 @@ src/
     seasons/2026.json   ← данные текущего сезона (секции, тексты, программа, партнёры)
     members/2026.json   ← участники текущего сезона
     members/all.json    ← мастер-база всех участников за все годы
+  legacy/
+    titles.json         ← мапа year × page → title для архивных страниц
+    {year}/*.body.html  ← извлечённый <body> оригинального сайта; ссылки переписаны под Astro-маршруты
   layouts/
     BaseLayout.astro    ← общий каркас (Header, Footer, Popup, SCSS, client.ts)
     Year2026Layout.astro ← тема 2026
+    ArchiveLayout.astro ← автономная HTML-оболочка для архивов (грузит /{slug}/css/style.min.css)
   components/
     Header.astro, Footer.astro, Popup.astro, HistoryWidget.astro
     sections/shared/    ← Intro, Philosophy, Media, Members, Program,
@@ -91,6 +96,7 @@ src/
     photos.astro
     team.astro
     reviews.astro
+    [year]/[...slug].astro ← динамический маршрут архивов (set:html через ArchiveLayout)
 scripts/img-convert.js  ← конвертация изображений (Node.js + sharp)
 astro.config.mjs        ← конфиг Astro
 ```
@@ -114,4 +120,4 @@ astro.config.mjs        ← конфиг Astro
 
 **Новый сезон** — создать ветку от `main`, обновить `src/content/seasons/{year}.json`, `src/content/members/{year}.json`, фото в `public/img/`, создать `Year{N}Layout.astro` и `src/styles/years/{year}.scss`. Ветки по годам: `2021`, `2022`, `2022_2`, `2023`, `2024`, `2025`, `2026`.
 
-**Phase 2 (будущее)** — динамические маршруты для архивов (`src/pages/[year]/index.astro`), перенос `public/2021/`...`public/2025/` в content collections.
+**По окончании сезона** — добавить год в `ARCHIVE_YEARS` (`src/config.ts`), извлечь `<body>` свежесобранного сайта в `src/legacy/{year}/*.body.html` (см. формат соседних архивов: переписать `./img/` → `/{year}/img/`, `*.html` → `/{path}/`), добавить заголовки в `src/legacy/titles.json`. Маршруты `/{year}/*` появятся автоматически через `[year]/[...slug].astro`. Если планируется полный порт в JSON/компоненты — см. `docs/superpowers/plans/2026-06-06-phase2-archive-2021-design.md`.
