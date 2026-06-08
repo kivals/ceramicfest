@@ -46,39 +46,39 @@
     "items": [
       {
         "url": "https://vk.com/wall-218843344_775",
-        "logo": "/img/aboutus/vk.jpg",
+        "logo": "../../assets/img/aboutus/vk.jpg",
         "alt": "Млечный путь. VK"
       },
       {
         "url": "https://vk.com/wall-204533248_536",
-        "logo": "/img/aboutus/vk.jpg",
+        "logo": "../../assets/img/aboutus/vk.jpg",
         "alt": "Млечный путь. VK"
       },
       {
         "url": "https://nikatv.ru/tv/programs/novosti/AkCIqkzqxbeapaMdkM4i",
-        "logo": "/img/aboutus/nikaTV.webp",
+        "logo": "../../assets/img/aboutus/nikaTV.webp",
         "alt": "nikaTV"
       },
       {
         "url": "https://nedelya40.ru/tajny-kosmosa-i-sekrety-masterstva_260768/",
-        "logo": "/img/aboutus/nedelya40.png",
+        "logo": "../../assets/img/aboutus/nedelya40.png",
         "alt": "неделя 40"
       },
       {
         "url": "https://gtrk-kaluga.ru/news/kultura/news-55283",
-        "logo": "/img/aboutus/gtrk-russia.png",
+        "logo": "../../assets/img/aboutus/gtrk-russia.png",
         "alt": "Россия гтрк Калуга"
       },
       {
         "url": "http://gtrk-kaluga.ru/otkrytaya-studiya/audio-10702",
-        "logo": "/img/aboutus/gtrk-russia.png",
+        "logo": "../../assets/img/aboutus/gtrk-russia.png",
         "alt": "Россия гтрк Калуга"
       }
     ]
   },
   "members": {
     "title": "Участники",
-    "dataFile": "members/2026.json",
+    "dataFile": "2026",
     "previewCount": 3,
     "moreButtonLabel": "Показать остальных"
   },
@@ -94,15 +94,15 @@
         "intro": "Если вы хотите стать партнером фестиваля, свяжитесь с нами, мы обсудим детали.",
         "items": [
           {
-            "logo": "/img/partners/13.png",
+            "logo": "../../assets/img/partners/13.png",
             "alt": "Танцевальная лаборатория Текст"
           },
           {
-            "logo": "/img/partners/11.png",
+            "logo": "../../assets/img/partners/11.png",
             "alt": "Suhl гостиница"
           },
           {
-            "logo": "/img/partners/12.png",
+            "logo": "../../assets/img/partners/12.png",
             "alt": "Инновационный театр балета"
           }
         ]
@@ -111,31 +111,31 @@
         "title": "Информационные партнеры",
         "items": [
           {
-            "logo": "/img/partners/14.png",
+            "logo": "../../assets/img/partners/14.png",
             "alt": "Ника ТВ"
           },
           {
-            "logo": "/img/partners/15.png",
+            "logo": "../../assets/img/partners/15.png",
             "alt": "Калужская неделя"
           },
           {
-            "logo": "/img/partners/16.png",
+            "logo": "../../assets/img/partners/16.png",
             "alt": "Калужские губернские ведомости"
           },
           {
-            "logo": "/img/partners/17.png",
+            "logo": "../../assets/img/partners/17.png",
             "alt": "Весть news"
           },
           {
-            "logo": "/img/partners/18.png",
+            "logo": "../../assets/img/partners/18.png",
             "alt": "Твоя Калуга"
           },
           {
-            "logo": "/img/partners/19.png",
+            "logo": "../../assets/img/partners/19.png",
             "alt": "Что Где Калуга"
           },
           {
-            "logo": "/img/partners/27.png",
+            "logo": "../../assets/img/partners/27.png",
             "alt": "ГТРК Калуга"
           }
         ]
@@ -153,701 +153,701 @@
       "1098743951",
       "1098745522"
     ],
-    "folder": "/img/photos/2025/",
+    "folder": "../../assets/img/photos/2025/",
     "photos": [
       {
-        "full": "/img/photos/2025/1.jpg",
-        "thumb": "/img/photos/2025/thumbs/1.webp",
+        "full": "../../assets/img/photos/2025/1.jpg",
+        "thumb": "../../assets/img/photos/2025/thumbs/1.webp",
         "alt": "Фото с фестиваля современной культуры"
       },
       {
-        "full": "/img/photos/2025/2.jpg",
-        "thumb": "/img/photos/2025/thumbs/2.webp",
+        "full": "../../assets/img/photos/2025/2.jpg",
+        "thumb": "../../assets/img/photos/2025/thumbs/2.webp",
         "alt": "Фото с фестиваля современной культуры"
       },
       {
-        "full": "/img/photos/2025/3.jpg",
-        "thumb": "/img/photos/2025/thumbs/3.webp",
+        "full": "../../assets/img/photos/2025/3.jpg",
+        "thumb": "../../assets/img/photos/2025/thumbs/3.webp",
         "alt": "Фото с фестиваля современной культуры"
       },
       {
-        "full": "/img/photos/2025/4.jpg",
-        "thumb": "/img/photos/2025/thumbs/4.webp",
+        "full": "../../assets/img/photos/2025/4.jpg",
+        "thumb": "../../assets/img/photos/2025/thumbs/4.webp",
         "alt": "Фото с фестиваля современной культуры"
       },
       {
-        "full": "/img/photos/2025/5.jpg",
-        "thumb": "/img/photos/2025/thumbs/5.webp",
+        "full": "../../assets/img/photos/2025/5.jpg",
+        "thumb": "../../assets/img/photos/2025/thumbs/5.webp",
         "alt": "Фото с фестиваля современной культуры"
       },
       {
-        "full": "/img/photos/2025/6.jpg",
-        "thumb": "/img/photos/2025/thumbs/6.webp",
+        "full": "../../assets/img/photos/2025/6.jpg",
+        "thumb": "../../assets/img/photos/2025/thumbs/6.webp",
         "alt": "Фото с фестиваля современной культуры"
       },
       {
-        "full": "/img/photos/2025/7.jpg",
-        "thumb": "/img/photos/2025/thumbs/7.webp",
+        "full": "../../assets/img/photos/2025/7.jpg",
+        "thumb": "../../assets/img/photos/2025/thumbs/7.webp",
         "alt": "Фото с фестиваля современной культуры"
       },
       {
-        "full": "/img/photos/2025/8.jpg",
-        "thumb": "/img/photos/2025/thumbs/8.webp",
+        "full": "../../assets/img/photos/2025/8.jpg",
+        "thumb": "../../assets/img/photos/2025/thumbs/8.webp",
         "alt": "Фото с фестиваля современной культуры"
       },
       {
-        "full": "/img/photos/2025/9.jpg",
-        "thumb": "/img/photos/2025/thumbs/9.webp",
+        "full": "../../assets/img/photos/2025/9.jpg",
+        "thumb": "../../assets/img/photos/2025/thumbs/9.webp",
         "alt": "Фото с фестиваля современной культуры"
       },
       {
-        "full": "/img/photos/2025/10.jpg",
-        "thumb": "/img/photos/2025/thumbs/10.webp",
+        "full": "../../assets/img/photos/2025/10.jpg",
+        "thumb": "../../assets/img/photos/2025/thumbs/10.webp",
         "alt": "Фото с фестиваля современной культуры"
       },
       {
-        "full": "/img/photos/2025/11.jpg",
-        "thumb": "/img/photos/2025/thumbs/11.webp",
+        "full": "../../assets/img/photos/2025/11.jpg",
+        "thumb": "../../assets/img/photos/2025/thumbs/11.webp",
         "alt": "Фото с фестиваля современной культуры"
       },
       {
-        "full": "/img/photos/2025/12.jpg",
-        "thumb": "/img/photos/2025/thumbs/12.webp",
+        "full": "../../assets/img/photos/2025/12.jpg",
+        "thumb": "../../assets/img/photos/2025/thumbs/12.webp",
         "alt": "Фото с фестиваля современной культуры"
       },
       {
-        "full": "/img/photos/2025/13.jpg",
-        "thumb": "/img/photos/2025/thumbs/13.webp",
+        "full": "../../assets/img/photos/2025/13.jpg",
+        "thumb": "../../assets/img/photos/2025/thumbs/13.webp",
         "alt": "Фото с фестиваля современной культуры"
       },
       {
-        "full": "/img/photos/2025/14.jpg",
-        "thumb": "/img/photos/2025/thumbs/14.webp",
+        "full": "../../assets/img/photos/2025/14.jpg",
+        "thumb": "../../assets/img/photos/2025/thumbs/14.webp",
         "alt": "Фото с фестиваля современной культуры"
       },
       {
-        "full": "/img/photos/2025/15.jpg",
-        "thumb": "/img/photos/2025/thumbs/15.webp",
+        "full": "../../assets/img/photos/2025/15.jpg",
+        "thumb": "../../assets/img/photos/2025/thumbs/15.webp",
         "alt": "Фото с фестиваля современной культуры"
       },
       {
-        "full": "/img/photos/2025/16.jpg",
-        "thumb": "/img/photos/2025/thumbs/16.webp",
+        "full": "../../assets/img/photos/2025/16.jpg",
+        "thumb": "../../assets/img/photos/2025/thumbs/16.webp",
         "alt": "Фото с фестиваля современной культуры"
       },
       {
-        "full": "/img/photos/2025/17.jpg",
-        "thumb": "/img/photos/2025/thumbs/17.webp",
+        "full": "../../assets/img/photos/2025/17.jpg",
+        "thumb": "../../assets/img/photos/2025/thumbs/17.webp",
         "alt": "Фото с фестиваля современной культуры"
       },
       {
-        "full": "/img/photos/2025/18.jpg",
-        "thumb": "/img/photos/2025/thumbs/18.webp",
+        "full": "../../assets/img/photos/2025/18.jpg",
+        "thumb": "../../assets/img/photos/2025/thumbs/18.webp",
         "alt": "Фото с фестиваля современной культуры"
       },
       {
-        "full": "/img/photos/2025/19.jpg",
-        "thumb": "/img/photos/2025/thumbs/19.webp",
+        "full": "../../assets/img/photos/2025/19.jpg",
+        "thumb": "../../assets/img/photos/2025/thumbs/19.webp",
         "alt": "Фото с фестиваля современной культуры"
       },
       {
-        "full": "/img/photos/2025/20.jpg",
-        "thumb": "/img/photos/2025/thumbs/20.webp",
+        "full": "../../assets/img/photos/2025/20.jpg",
+        "thumb": "../../assets/img/photos/2025/thumbs/20.webp",
         "alt": "Фото с фестиваля современной культуры"
       },
       {
-        "full": "/img/photos/2025/21.jpg",
-        "thumb": "/img/photos/2025/thumbs/21.webp",
+        "full": "../../assets/img/photos/2025/21.jpg",
+        "thumb": "../../assets/img/photos/2025/thumbs/21.webp",
         "alt": "Фото с фестиваля современной культуры"
       },
       {
-        "full": "/img/photos/2025/22.jpg",
-        "thumb": "/img/photos/2025/thumbs/22.webp",
+        "full": "../../assets/img/photos/2025/22.jpg",
+        "thumb": "../../assets/img/photos/2025/thumbs/22.webp",
         "alt": "Фото с фестиваля современной культуры"
       },
       {
-        "full": "/img/photos/2025/23.jpg",
-        "thumb": "/img/photos/2025/thumbs/23.webp",
+        "full": "../../assets/img/photos/2025/23.jpg",
+        "thumb": "../../assets/img/photos/2025/thumbs/23.webp",
         "alt": "Фото с фестиваля современной культуры"
       },
       {
-        "full": "/img/photos/2025/24.jpg",
-        "thumb": "/img/photos/2025/thumbs/24.webp",
+        "full": "../../assets/img/photos/2025/24.jpg",
+        "thumb": "../../assets/img/photos/2025/thumbs/24.webp",
         "alt": "Фото с фестиваля современной культуры"
       },
       {
-        "full": "/img/photos/2025/25.jpg",
-        "thumb": "/img/photos/2025/thumbs/25.webp",
+        "full": "../../assets/img/photos/2025/25.jpg",
+        "thumb": "../../assets/img/photos/2025/thumbs/25.webp",
         "alt": "Фото с фестиваля современной культуры"
       },
       {
-        "full": "/img/photos/2025/26.jpg",
-        "thumb": "/img/photos/2025/thumbs/26.webp",
+        "full": "../../assets/img/photos/2025/26.jpg",
+        "thumb": "../../assets/img/photos/2025/thumbs/26.webp",
         "alt": "Фото с фестиваля современной культуры"
       },
       {
-        "full": "/img/photos/2025/27.jpg",
-        "thumb": "/img/photos/2025/thumbs/27.webp",
+        "full": "../../assets/img/photos/2025/27.jpg",
+        "thumb": "../../assets/img/photos/2025/thumbs/27.webp",
         "alt": "Фото с фестиваля современной культуры"
       },
       {
-        "full": "/img/photos/2025/28.jpg",
-        "thumb": "/img/photos/2025/thumbs/28.webp",
+        "full": "../../assets/img/photos/2025/28.jpg",
+        "thumb": "../../assets/img/photos/2025/thumbs/28.webp",
         "alt": "Фото с фестиваля современной культуры"
       },
       {
-        "full": "/img/photos/2025/29.jpg",
-        "thumb": "/img/photos/2025/thumbs/29.webp",
+        "full": "../../assets/img/photos/2025/29.jpg",
+        "thumb": "../../assets/img/photos/2025/thumbs/29.webp",
         "alt": "Фото с фестиваля современной культуры"
       },
       {
-        "full": "/img/photos/2025/30.jpg",
-        "thumb": "/img/photos/2025/thumbs/30.webp",
+        "full": "../../assets/img/photos/2025/30.jpg",
+        "thumb": "../../assets/img/photos/2025/thumbs/30.webp",
         "alt": "Фото с фестиваля современной культуры"
       },
       {
-        "full": "/img/photos/2025/31.jpg",
-        "thumb": "/img/photos/2025/thumbs/31.webp",
+        "full": "../../assets/img/photos/2025/31.jpg",
+        "thumb": "../../assets/img/photos/2025/thumbs/31.webp",
         "alt": "Фото с фестиваля современной культуры"
       },
       {
-        "full": "/img/photos/2025/32.jpg",
-        "thumb": "/img/photos/2025/thumbs/32.webp",
+        "full": "../../assets/img/photos/2025/32.jpg",
+        "thumb": "../../assets/img/photos/2025/thumbs/32.webp",
         "alt": "Фото с фестиваля современной культуры"
       },
       {
-        "full": "/img/photos/2025/33.jpg",
-        "thumb": "/img/photos/2025/thumbs/33.webp",
+        "full": "../../assets/img/photos/2025/33.jpg",
+        "thumb": "../../assets/img/photos/2025/thumbs/33.webp",
         "alt": "Фото с фестиваля современной культуры"
       },
       {
-        "full": "/img/photos/2025/34.jpg",
-        "thumb": "/img/photos/2025/thumbs/34.webp",
+        "full": "../../assets/img/photos/2025/34.jpg",
+        "thumb": "../../assets/img/photos/2025/thumbs/34.webp",
         "alt": "Фото с фестиваля современной культуры"
       },
       {
-        "full": "/img/photos/2025/35.jpg",
-        "thumb": "/img/photos/2025/thumbs/35.webp",
+        "full": "../../assets/img/photos/2025/35.jpg",
+        "thumb": "../../assets/img/photos/2025/thumbs/35.webp",
         "alt": "Фото с фестиваля современной культуры"
       },
       {
-        "full": "/img/photos/2025/36.jpg",
-        "thumb": "/img/photos/2025/thumbs/36.webp",
+        "full": "../../assets/img/photos/2025/36.jpg",
+        "thumb": "../../assets/img/photos/2025/thumbs/36.webp",
         "alt": "Фото с фестиваля современной культуры"
       },
       {
-        "full": "/img/photos/2025/37.jpg",
-        "thumb": "/img/photos/2025/thumbs/37.webp",
+        "full": "../../assets/img/photos/2025/37.jpg",
+        "thumb": "../../assets/img/photos/2025/thumbs/37.webp",
         "alt": "Фото с фестиваля современной культуры"
       },
       {
-        "full": "/img/photos/2025/38.jpg",
-        "thumb": "/img/photos/2025/thumbs/38.webp",
+        "full": "../../assets/img/photos/2025/38.jpg",
+        "thumb": "../../assets/img/photos/2025/thumbs/38.webp",
         "alt": "Фото с фестиваля современной культуры"
       },
       {
-        "full": "/img/photos/2025/39.jpg",
-        "thumb": "/img/photos/2025/thumbs/39.webp",
+        "full": "../../assets/img/photos/2025/39.jpg",
+        "thumb": "../../assets/img/photos/2025/thumbs/39.webp",
         "alt": "Фото с фестиваля современной культуры"
       },
       {
-        "full": "/img/photos/2025/40.jpg",
-        "thumb": "/img/photos/2025/thumbs/40.webp",
+        "full": "../../assets/img/photos/2025/40.jpg",
+        "thumb": "../../assets/img/photos/2025/thumbs/40.webp",
         "alt": "Фото с фестиваля современной культуры"
       },
       {
-        "full": "/img/photos/2025/41.jpg",
-        "thumb": "/img/photos/2025/thumbs/41.webp",
+        "full": "../../assets/img/photos/2025/41.jpg",
+        "thumb": "../../assets/img/photos/2025/thumbs/41.webp",
         "alt": "Фото с фестиваля современной культуры"
       },
       {
-        "full": "/img/photos/2025/42.jpg",
-        "thumb": "/img/photos/2025/thumbs/42.webp",
+        "full": "../../assets/img/photos/2025/42.jpg",
+        "thumb": "../../assets/img/photos/2025/thumbs/42.webp",
         "alt": "Фото с фестиваля современной культуры"
       },
       {
-        "full": "/img/photos/2025/43.jpg",
-        "thumb": "/img/photos/2025/thumbs/43.webp",
+        "full": "../../assets/img/photos/2025/43.jpg",
+        "thumb": "../../assets/img/photos/2025/thumbs/43.webp",
         "alt": "Фото с фестиваля современной культуры"
       },
       {
-        "full": "/img/photos/2025/44.jpg",
-        "thumb": "/img/photos/2025/thumbs/44.webp",
+        "full": "../../assets/img/photos/2025/44.jpg",
+        "thumb": "../../assets/img/photos/2025/thumbs/44.webp",
         "alt": "Фото с фестиваля современной культуры"
       },
       {
-        "full": "/img/photos/2025/45.jpg",
-        "thumb": "/img/photos/2025/thumbs/45.webp",
+        "full": "../../assets/img/photos/2025/45.jpg",
+        "thumb": "../../assets/img/photos/2025/thumbs/45.webp",
         "alt": "Фото с фестиваля современной культуры"
       },
       {
-        "full": "/img/photos/2025/46.jpg",
-        "thumb": "/img/photos/2025/thumbs/46.webp",
+        "full": "../../assets/img/photos/2025/46.jpg",
+        "thumb": "../../assets/img/photos/2025/thumbs/46.webp",
         "alt": "Фото с фестиваля современной культуры"
       },
       {
-        "full": "/img/photos/2025/47.jpg",
-        "thumb": "/img/photos/2025/thumbs/47.webp",
+        "full": "../../assets/img/photos/2025/47.jpg",
+        "thumb": "../../assets/img/photos/2025/thumbs/47.webp",
         "alt": "Фото с фестиваля современной культуры"
       },
       {
-        "full": "/img/photos/2025/48.jpg",
-        "thumb": "/img/photos/2025/thumbs/48.webp",
+        "full": "../../assets/img/photos/2025/48.jpg",
+        "thumb": "../../assets/img/photos/2025/thumbs/48.webp",
         "alt": "Фото с фестиваля современной культуры"
       },
       {
-        "full": "/img/photos/2025/49.jpg",
-        "thumb": "/img/photos/2025/thumbs/49.webp",
+        "full": "../../assets/img/photos/2025/49.jpg",
+        "thumb": "../../assets/img/photos/2025/thumbs/49.webp",
         "alt": "Фото с фестиваля современной культуры"
       },
       {
-        "full": "/img/photos/2025/50.jpg",
-        "thumb": "/img/photos/2025/thumbs/50.webp",
+        "full": "../../assets/img/photos/2025/50.jpg",
+        "thumb": "../../assets/img/photos/2025/thumbs/50.webp",
         "alt": "Фото с фестиваля современной культуры"
       },
       {
-        "full": "/img/photos/2025/51.jpg",
-        "thumb": "/img/photos/2025/thumbs/51.webp",
+        "full": "../../assets/img/photos/2025/51.jpg",
+        "thumb": "../../assets/img/photos/2025/thumbs/51.webp",
         "alt": "Фото с фестиваля современной культуры"
       },
       {
-        "full": "/img/photos/2025/52.jpg",
-        "thumb": "/img/photos/2025/thumbs/52.webp",
+        "full": "../../assets/img/photos/2025/52.jpg",
+        "thumb": "../../assets/img/photos/2025/thumbs/52.webp",
         "alt": "Фото с фестиваля современной культуры"
       },
       {
-        "full": "/img/photos/2025/53.jpg",
-        "thumb": "/img/photos/2025/thumbs/53.webp",
+        "full": "../../assets/img/photos/2025/53.jpg",
+        "thumb": "../../assets/img/photos/2025/thumbs/53.webp",
         "alt": "Фото с фестиваля современной культуры"
       },
       {
-        "full": "/img/photos/2025/54.jpg",
-        "thumb": "/img/photos/2025/thumbs/54.webp",
+        "full": "../../assets/img/photos/2025/54.jpg",
+        "thumb": "../../assets/img/photos/2025/thumbs/54.webp",
         "alt": "Фото с фестиваля современной культуры"
       },
       {
-        "full": "/img/photos/2025/55.jpg",
-        "thumb": "/img/photos/2025/thumbs/55.webp",
+        "full": "../../assets/img/photos/2025/55.jpg",
+        "thumb": "../../assets/img/photos/2025/thumbs/55.webp",
         "alt": "Фото с фестиваля современной культуры"
       },
       {
-        "full": "/img/photos/2025/56.jpg",
-        "thumb": "/img/photos/2025/thumbs/56.webp",
+        "full": "../../assets/img/photos/2025/56.jpg",
+        "thumb": "../../assets/img/photos/2025/thumbs/56.webp",
         "alt": "Фото с фестиваля современной культуры"
       },
       {
-        "full": "/img/photos/2025/57.jpg",
-        "thumb": "/img/photos/2025/thumbs/57.webp",
+        "full": "../../assets/img/photos/2025/57.jpg",
+        "thumb": "../../assets/img/photos/2025/thumbs/57.webp",
         "alt": "Фото с фестиваля современной культуры"
       },
       {
-        "full": "/img/photos/2025/58.jpg",
-        "thumb": "/img/photos/2025/thumbs/58.webp",
+        "full": "../../assets/img/photos/2025/58.jpg",
+        "thumb": "../../assets/img/photos/2025/thumbs/58.webp",
         "alt": "Фото с фестиваля современной культуры"
       },
       {
-        "full": "/img/photos/2025/59.jpg",
-        "thumb": "/img/photos/2025/thumbs/59.webp",
+        "full": "../../assets/img/photos/2025/59.jpg",
+        "thumb": "../../assets/img/photos/2025/thumbs/59.webp",
         "alt": "Фото с фестиваля современной культуры"
       },
       {
-        "full": "/img/photos/2025/60.jpg",
-        "thumb": "/img/photos/2025/thumbs/60.webp",
+        "full": "../../assets/img/photos/2025/60.jpg",
+        "thumb": "../../assets/img/photos/2025/thumbs/60.webp",
         "alt": "Фото с фестиваля современной культуры"
       },
       {
-        "full": "/img/photos/2025/61.jpg",
-        "thumb": "/img/photos/2025/thumbs/61.webp",
+        "full": "../../assets/img/photos/2025/61.jpg",
+        "thumb": "../../assets/img/photos/2025/thumbs/61.webp",
         "alt": "Фото с фестиваля современной культуры"
       },
       {
-        "full": "/img/photos/2025/62.jpg",
-        "thumb": "/img/photos/2025/thumbs/62.webp",
+        "full": "../../assets/img/photos/2025/62.jpg",
+        "thumb": "../../assets/img/photos/2025/thumbs/62.webp",
         "alt": "Фото с фестиваля современной культуры"
       },
       {
-        "full": "/img/photos/2025/63.jpg",
-        "thumb": "/img/photos/2025/thumbs/63.webp",
+        "full": "../../assets/img/photos/2025/63.jpg",
+        "thumb": "../../assets/img/photos/2025/thumbs/63.webp",
         "alt": "Фото с фестиваля современной культуры"
       },
       {
-        "full": "/img/photos/2025/64.jpg",
-        "thumb": "/img/photos/2025/thumbs/64.webp",
+        "full": "../../assets/img/photos/2025/64.jpg",
+        "thumb": "../../assets/img/photos/2025/thumbs/64.webp",
         "alt": "Фото с фестиваля современной культуры"
       },
       {
-        "full": "/img/photos/2025/65.jpg",
-        "thumb": "/img/photos/2025/thumbs/65.webp",
+        "full": "../../assets/img/photos/2025/65.jpg",
+        "thumb": "../../assets/img/photos/2025/thumbs/65.webp",
         "alt": "Фото с фестиваля современной культуры"
       },
       {
-        "full": "/img/photos/2025/66.jpg",
-        "thumb": "/img/photos/2025/thumbs/66.webp",
+        "full": "../../assets/img/photos/2025/66.jpg",
+        "thumb": "../../assets/img/photos/2025/thumbs/66.webp",
         "alt": "Фото с фестиваля современной культуры"
       },
       {
-        "full": "/img/photos/2025/67.jpg",
-        "thumb": "/img/photos/2025/thumbs/67.webp",
+        "full": "../../assets/img/photos/2025/67.jpg",
+        "thumb": "../../assets/img/photos/2025/thumbs/67.webp",
         "alt": "Фото с фестиваля современной культуры"
       },
       {
-        "full": "/img/photos/2025/68.jpg",
-        "thumb": "/img/photos/2025/thumbs/68.webp",
+        "full": "../../assets/img/photos/2025/68.jpg",
+        "thumb": "../../assets/img/photos/2025/thumbs/68.webp",
         "alt": "Фото с фестиваля современной культуры"
       },
       {
-        "full": "/img/photos/2025/69.jpg",
-        "thumb": "/img/photos/2025/thumbs/69.webp",
+        "full": "../../assets/img/photos/2025/69.jpg",
+        "thumb": "../../assets/img/photos/2025/thumbs/69.webp",
         "alt": "Фото с фестиваля современной культуры"
       },
       {
-        "full": "/img/photos/2025/70.jpg",
-        "thumb": "/img/photos/2025/thumbs/70.webp",
+        "full": "../../assets/img/photos/2025/70.jpg",
+        "thumb": "../../assets/img/photos/2025/thumbs/70.webp",
         "alt": "Фото с фестиваля современной культуры"
       },
       {
-        "full": "/img/photos/2025/71.jpg",
-        "thumb": "/img/photos/2025/thumbs/71.webp",
+        "full": "../../assets/img/photos/2025/71.jpg",
+        "thumb": "../../assets/img/photos/2025/thumbs/71.webp",
         "alt": "Фото с фестиваля современной культуры"
       },
       {
-        "full": "/img/photos/2025/72.jpg",
-        "thumb": "/img/photos/2025/thumbs/72.webp",
+        "full": "../../assets/img/photos/2025/72.jpg",
+        "thumb": "../../assets/img/photos/2025/thumbs/72.webp",
         "alt": "Фото с фестиваля современной культуры"
       },
       {
-        "full": "/img/photos/2025/73.jpg",
-        "thumb": "/img/photos/2025/thumbs/73.webp",
+        "full": "../../assets/img/photos/2025/73.jpg",
+        "thumb": "../../assets/img/photos/2025/thumbs/73.webp",
         "alt": "Фото с фестиваля современной культуры"
       },
       {
-        "full": "/img/photos/2025/74.jpg",
-        "thumb": "/img/photos/2025/thumbs/74.webp",
+        "full": "../../assets/img/photos/2025/74.jpg",
+        "thumb": "../../assets/img/photos/2025/thumbs/74.webp",
         "alt": "Фото с фестиваля современной культуры"
       },
       {
-        "full": "/img/photos/2025/75.jpg",
-        "thumb": "/img/photos/2025/thumbs/75.webp",
+        "full": "../../assets/img/photos/2025/75.jpg",
+        "thumb": "../../assets/img/photos/2025/thumbs/75.webp",
         "alt": "Фото с фестиваля современной культуры"
       },
       {
-        "full": "/img/photos/2025/76.jpg",
-        "thumb": "/img/photos/2025/thumbs/76.webp",
+        "full": "../../assets/img/photos/2025/76.jpg",
+        "thumb": "../../assets/img/photos/2025/thumbs/76.webp",
         "alt": "Фото с фестиваля современной культуры"
       },
       {
-        "full": "/img/photos/2025/77.jpg",
-        "thumb": "/img/photos/2025/thumbs/77.webp",
+        "full": "../../assets/img/photos/2025/77.jpg",
+        "thumb": "../../assets/img/photos/2025/thumbs/77.webp",
         "alt": "Фото с фестиваля современной культуры"
       },
       {
-        "full": "/img/photos/2025/78.jpg",
-        "thumb": "/img/photos/2025/thumbs/78.webp",
+        "full": "../../assets/img/photos/2025/78.jpg",
+        "thumb": "../../assets/img/photos/2025/thumbs/78.webp",
         "alt": "Фото с фестиваля современной культуры"
       },
       {
-        "full": "/img/photos/2025/79.jpg",
-        "thumb": "/img/photos/2025/thumbs/79.webp",
+        "full": "../../assets/img/photos/2025/79.jpg",
+        "thumb": "../../assets/img/photos/2025/thumbs/79.webp",
         "alt": "Фото с фестиваля современной культуры"
       },
       {
-        "full": "/img/photos/2025/80.jpg",
-        "thumb": "/img/photos/2025/thumbs/80.webp",
+        "full": "../../assets/img/photos/2025/80.jpg",
+        "thumb": "../../assets/img/photos/2025/thumbs/80.webp",
         "alt": "Фото с фестиваля современной культуры"
       },
       {
-        "full": "/img/photos/2025/81.jpg",
-        "thumb": "/img/photos/2025/thumbs/81.webp",
+        "full": "../../assets/img/photos/2025/81.jpg",
+        "thumb": "../../assets/img/photos/2025/thumbs/81.webp",
         "alt": "Фото с фестиваля современной культуры"
       },
       {
-        "full": "/img/photos/2025/82.jpg",
-        "thumb": "/img/photos/2025/thumbs/82.webp",
+        "full": "../../assets/img/photos/2025/82.jpg",
+        "thumb": "../../assets/img/photos/2025/thumbs/82.webp",
         "alt": "Фото с фестиваля современной культуры"
       },
       {
-        "full": "/img/photos/2025/83.jpg",
-        "thumb": "/img/photos/2025/thumbs/83.webp",
+        "full": "../../assets/img/photos/2025/83.jpg",
+        "thumb": "../../assets/img/photos/2025/thumbs/83.webp",
         "alt": "Фото с фестиваля современной культуры"
       },
       {
-        "full": "/img/photos/2025/84.jpg",
-        "thumb": "/img/photos/2025/thumbs/84.webp",
+        "full": "../../assets/img/photos/2025/84.jpg",
+        "thumb": "../../assets/img/photos/2025/thumbs/84.webp",
         "alt": "Фото с фестиваля современной культуры"
       },
       {
-        "full": "/img/photos/2025/85.jpg",
-        "thumb": "/img/photos/2025/thumbs/85.webp",
+        "full": "../../assets/img/photos/2025/85.jpg",
+        "thumb": "../../assets/img/photos/2025/thumbs/85.webp",
         "alt": "Фото с фестиваля современной культуры"
       },
       {
-        "full": "/img/photos/2025/86.jpg",
-        "thumb": "/img/photos/2025/thumbs/86.webp",
+        "full": "../../assets/img/photos/2025/86.jpg",
+        "thumb": "../../assets/img/photos/2025/thumbs/86.webp",
         "alt": "Фото с фестиваля современной культуры"
       },
       {
-        "full": "/img/photos/2025/87.jpg",
-        "thumb": "/img/photos/2025/thumbs/87.webp",
+        "full": "../../assets/img/photos/2025/87.jpg",
+        "thumb": "../../assets/img/photos/2025/thumbs/87.webp",
         "alt": "Фото с фестиваля современной культуры"
       },
       {
-        "full": "/img/photos/2025/88.jpg",
-        "thumb": "/img/photos/2025/thumbs/88.webp",
+        "full": "../../assets/img/photos/2025/88.jpg",
+        "thumb": "../../assets/img/photos/2025/thumbs/88.webp",
         "alt": "Фото с фестиваля современной культуры"
       },
       {
-        "full": "/img/photos/2025/89.jpg",
-        "thumb": "/img/photos/2025/thumbs/89.webp",
+        "full": "../../assets/img/photos/2025/89.jpg",
+        "thumb": "../../assets/img/photos/2025/thumbs/89.webp",
         "alt": "Фото с фестиваля современной культуры"
       },
       {
-        "full": "/img/photos/2025/90.jpg",
-        "thumb": "/img/photos/2025/thumbs/90.webp",
+        "full": "../../assets/img/photos/2025/90.jpg",
+        "thumb": "../../assets/img/photos/2025/thumbs/90.webp",
         "alt": "Фото с фестиваля современной культуры"
       },
       {
-        "full": "/img/photos/2025/91.jpg",
-        "thumb": "/img/photos/2025/thumbs/91.webp",
+        "full": "../../assets/img/photos/2025/91.jpg",
+        "thumb": "../../assets/img/photos/2025/thumbs/91.webp",
         "alt": "Фото с фестиваля современной культуры"
       },
       {
-        "full": "/img/photos/2025/92.jpg",
-        "thumb": "/img/photos/2025/thumbs/92.webp",
+        "full": "../../assets/img/photos/2025/92.jpg",
+        "thumb": "../../assets/img/photos/2025/thumbs/92.webp",
         "alt": "Фото с фестиваля современной культуры"
       },
       {
-        "full": "/img/photos/2025/93.jpg",
-        "thumb": "/img/photos/2025/thumbs/93.webp",
+        "full": "../../assets/img/photos/2025/93.jpg",
+        "thumb": "../../assets/img/photos/2025/thumbs/93.webp",
         "alt": "Фото с фестиваля современной культуры"
       },
       {
-        "full": "/img/photos/2025/94.jpg",
-        "thumb": "/img/photos/2025/thumbs/94.webp",
+        "full": "../../assets/img/photos/2025/94.jpg",
+        "thumb": "../../assets/img/photos/2025/thumbs/94.webp",
         "alt": "Фото с фестиваля современной культуры"
       },
       {
-        "full": "/img/photos/2025/95.jpg",
-        "thumb": "/img/photos/2025/thumbs/95.webp",
+        "full": "../../assets/img/photos/2025/95.jpg",
+        "thumb": "../../assets/img/photos/2025/thumbs/95.webp",
         "alt": "Фото с фестиваля современной культуры"
       },
       {
-        "full": "/img/photos/2025/96.jpg",
-        "thumb": "/img/photos/2025/thumbs/96.webp",
+        "full": "../../assets/img/photos/2025/96.jpg",
+        "thumb": "../../assets/img/photos/2025/thumbs/96.webp",
         "alt": "Фото с фестиваля современной культуры"
       },
       {
-        "full": "/img/photos/2025/97.jpg",
-        "thumb": "/img/photos/2025/thumbs/97.webp",
+        "full": "../../assets/img/photos/2025/97.jpg",
+        "thumb": "../../assets/img/photos/2025/thumbs/97.webp",
         "alt": "Фото с фестиваля современной культуры"
       },
       {
-        "full": "/img/photos/2025/98.jpg",
-        "thumb": "/img/photos/2025/thumbs/98.webp",
+        "full": "../../assets/img/photos/2025/98.jpg",
+        "thumb": "../../assets/img/photos/2025/thumbs/98.webp",
         "alt": "Фото с фестиваля современной культуры"
       },
       {
-        "full": "/img/photos/2025/99.jpg",
-        "thumb": "/img/photos/2025/thumbs/99.webp",
+        "full": "../../assets/img/photos/2025/99.jpg",
+        "thumb": "../../assets/img/photos/2025/thumbs/99.webp",
         "alt": "Фото с фестиваля современной культуры"
       },
       {
-        "full": "/img/photos/2025/100.jpg",
-        "thumb": "/img/photos/2025/thumbs/100.webp",
+        "full": "../../assets/img/photos/2025/100.jpg",
+        "thumb": "../../assets/img/photos/2025/thumbs/100.webp",
         "alt": "Фото с фестиваля современной культуры"
       },
       {
-        "full": "/img/photos/2025/101.jpg",
-        "thumb": "/img/photos/2025/thumbs/101.webp",
+        "full": "../../assets/img/photos/2025/101.jpg",
+        "thumb": "../../assets/img/photos/2025/thumbs/101.webp",
         "alt": "Фото с фестиваля современной культуры"
       },
       {
-        "full": "/img/photos/2025/102.jpg",
-        "thumb": "/img/photos/2025/thumbs/102.webp",
+        "full": "../../assets/img/photos/2025/102.jpg",
+        "thumb": "../../assets/img/photos/2025/thumbs/102.webp",
         "alt": "Фото с фестиваля современной культуры"
       },
       {
-        "full": "/img/photos/2025/103.jpg",
-        "thumb": "/img/photos/2025/thumbs/103.webp",
+        "full": "../../assets/img/photos/2025/103.jpg",
+        "thumb": "../../assets/img/photos/2025/thumbs/103.webp",
         "alt": "Фото с фестиваля современной культуры"
       },
       {
-        "full": "/img/photos/2025/104.jpg",
-        "thumb": "/img/photos/2025/thumbs/104.webp",
+        "full": "../../assets/img/photos/2025/104.jpg",
+        "thumb": "../../assets/img/photos/2025/thumbs/104.webp",
         "alt": "Фото с фестиваля современной культуры"
       },
       {
-        "full": "/img/photos/2025/105.jpg",
-        "thumb": "/img/photos/2025/thumbs/105.webp",
+        "full": "../../assets/img/photos/2025/105.jpg",
+        "thumb": "../../assets/img/photos/2025/thumbs/105.webp",
         "alt": "Фото с фестиваля современной культуры"
       },
       {
-        "full": "/img/photos/2025/106.jpg",
-        "thumb": "/img/photos/2025/thumbs/106.webp",
+        "full": "../../assets/img/photos/2025/106.jpg",
+        "thumb": "../../assets/img/photos/2025/thumbs/106.webp",
         "alt": "Фото с фестиваля современной культуры"
       },
       {
-        "full": "/img/photos/2025/107.jpg",
-        "thumb": "/img/photos/2025/thumbs/107.webp",
+        "full": "../../assets/img/photos/2025/107.jpg",
+        "thumb": "../../assets/img/photos/2025/thumbs/107.webp",
         "alt": "Фото с фестиваля современной культуры"
       },
       {
-        "full": "/img/photos/2025/108.jpg",
-        "thumb": "/img/photos/2025/thumbs/108.webp",
+        "full": "../../assets/img/photos/2025/108.jpg",
+        "thumb": "../../assets/img/photos/2025/thumbs/108.webp",
         "alt": "Фото с фестиваля современной культуры"
       },
       {
-        "full": "/img/photos/2025/109.jpg",
-        "thumb": "/img/photos/2025/thumbs/109.webp",
+        "full": "../../assets/img/photos/2025/109.jpg",
+        "thumb": "../../assets/img/photos/2025/thumbs/109.webp",
         "alt": "Фото с фестиваля современной культуры"
       },
       {
-        "full": "/img/photos/2025/110.jpg",
-        "thumb": "/img/photos/2025/thumbs/110.webp",
+        "full": "../../assets/img/photos/2025/110.jpg",
+        "thumb": "../../assets/img/photos/2025/thumbs/110.webp",
         "alt": "Фото с фестиваля современной культуры"
       },
       {
-        "full": "/img/photos/2025/111.jpg",
-        "thumb": "/img/photos/2025/thumbs/111.webp",
+        "full": "../../assets/img/photos/2025/111.jpg",
+        "thumb": "../../assets/img/photos/2025/thumbs/111.webp",
         "alt": "Фото с фестиваля современной культуры"
       },
       {
-        "full": "/img/photos/2025/112.jpg",
-        "thumb": "/img/photos/2025/thumbs/112.webp",
+        "full": "../../assets/img/photos/2025/112.jpg",
+        "thumb": "../../assets/img/photos/2025/thumbs/112.webp",
         "alt": "Фото с фестиваля современной культуры"
       },
       {
-        "full": "/img/photos/2025/113.jpg",
-        "thumb": "/img/photos/2025/thumbs/113.webp",
+        "full": "../../assets/img/photos/2025/113.jpg",
+        "thumb": "../../assets/img/photos/2025/thumbs/113.webp",
         "alt": "Фото с фестиваля современной культуры"
       },
       {
-        "full": "/img/photos/2025/114.jpg",
-        "thumb": "/img/photos/2025/thumbs/114.webp",
+        "full": "../../assets/img/photos/2025/114.jpg",
+        "thumb": "../../assets/img/photos/2025/thumbs/114.webp",
         "alt": "Фото с фестиваля современной культуры"
       },
       {
-        "full": "/img/photos/2025/115.jpg",
-        "thumb": "/img/photos/2025/thumbs/115.webp",
+        "full": "../../assets/img/photos/2025/115.jpg",
+        "thumb": "../../assets/img/photos/2025/thumbs/115.webp",
         "alt": "Фото с фестиваля современной культуры"
       },
       {
-        "full": "/img/photos/2025/116.jpg",
-        "thumb": "/img/photos/2025/thumbs/116.webp",
+        "full": "../../assets/img/photos/2025/116.jpg",
+        "thumb": "../../assets/img/photos/2025/thumbs/116.webp",
         "alt": "Фото с фестиваля современной культуры"
       },
       {
-        "full": "/img/photos/2025/117.jpg",
-        "thumb": "/img/photos/2025/thumbs/117.webp",
+        "full": "../../assets/img/photos/2025/117.jpg",
+        "thumb": "../../assets/img/photos/2025/thumbs/117.webp",
         "alt": "Фото с фестиваля современной культуры"
       },
       {
-        "full": "/img/photos/2025/118.jpg",
-        "thumb": "/img/photos/2025/thumbs/118.webp",
+        "full": "../../assets/img/photos/2025/118.jpg",
+        "thumb": "../../assets/img/photos/2025/thumbs/118.webp",
         "alt": "Фото с фестиваля современной культуры"
       },
       {
-        "full": "/img/photos/2025/119.jpg",
-        "thumb": "/img/photos/2025/thumbs/119.webp",
+        "full": "../../assets/img/photos/2025/119.jpg",
+        "thumb": "../../assets/img/photos/2025/thumbs/119.webp",
         "alt": "Фото с фестиваля современной культуры"
       },
       {
-        "full": "/img/photos/2025/120.jpg",
-        "thumb": "/img/photos/2025/thumbs/120.webp",
+        "full": "../../assets/img/photos/2025/120.jpg",
+        "thumb": "../../assets/img/photos/2025/thumbs/120.webp",
         "alt": "Фото с фестиваля современной культуры"
       },
       {
-        "full": "/img/photos/2025/121.jpg",
-        "thumb": "/img/photos/2025/thumbs/121.webp",
+        "full": "../../assets/img/photos/2025/121.jpg",
+        "thumb": "../../assets/img/photos/2025/thumbs/121.webp",
         "alt": "Фото с фестиваля современной культуры"
       },
       {
-        "full": "/img/photos/2025/122.jpg",
-        "thumb": "/img/photos/2025/thumbs/122.webp",
+        "full": "../../assets/img/photos/2025/122.jpg",
+        "thumb": "../../assets/img/photos/2025/thumbs/122.webp",
         "alt": "Фото с фестиваля современной культуры"
       },
       {
-        "full": "/img/photos/2025/123.jpg",
-        "thumb": "/img/photos/2025/thumbs/123.webp",
+        "full": "../../assets/img/photos/2025/123.jpg",
+        "thumb": "../../assets/img/photos/2025/thumbs/123.webp",
         "alt": "Фото с фестиваля современной культуры"
       },
       {
-        "full": "/img/photos/2025/124.jpg",
-        "thumb": "/img/photos/2025/thumbs/124.webp",
+        "full": "../../assets/img/photos/2025/124.jpg",
+        "thumb": "../../assets/img/photos/2025/thumbs/124.webp",
         "alt": "Фото с фестиваля современной культуры"
       },
       {
-        "full": "/img/photos/2025/125.jpg",
-        "thumb": "/img/photos/2025/thumbs/125.webp",
+        "full": "../../assets/img/photos/2025/125.jpg",
+        "thumb": "../../assets/img/photos/2025/thumbs/125.webp",
         "alt": "Фото с фестиваля современной культуры"
       },
       {
-        "full": "/img/photos/2025/126.jpg",
-        "thumb": "/img/photos/2025/thumbs/126.webp",
+        "full": "../../assets/img/photos/2025/126.jpg",
+        "thumb": "../../assets/img/photos/2025/thumbs/126.webp",
         "alt": "Фото с фестиваля современной культуры"
       },
       {
-        "full": "/img/photos/2025/127.jpg",
-        "thumb": "/img/photos/2025/thumbs/127.webp",
+        "full": "../../assets/img/photos/2025/127.jpg",
+        "thumb": "../../assets/img/photos/2025/thumbs/127.webp",
         "alt": "Фото с фестиваля современной культуры"
       },
       {
-        "full": "/img/photos/2025/128.jpg",
-        "thumb": "/img/photos/2025/thumbs/128.webp",
+        "full": "../../assets/img/photos/2025/128.jpg",
+        "thumb": "../../assets/img/photos/2025/thumbs/128.webp",
         "alt": "Фото с фестиваля современной культуры"
       },
       {
-        "full": "/img/photos/2025/129.jpg",
-        "thumb": "/img/photos/2025/thumbs/129.webp",
+        "full": "../../assets/img/photos/2025/129.jpg",
+        "thumb": "../../assets/img/photos/2025/thumbs/129.webp",
         "alt": "Фото с фестиваля современной культуры"
       },
       {
-        "full": "/img/photos/2025/130.jpg",
-        "thumb": "/img/photos/2025/thumbs/130.webp",
+        "full": "../../assets/img/photos/2025/130.jpg",
+        "thumb": "../../assets/img/photos/2025/thumbs/130.webp",
         "alt": "Фото с фестиваля современной культуры"
       },
       {
-        "full": "/img/photos/2025/131.jpg",
-        "thumb": "/img/photos/2025/thumbs/131.webp",
+        "full": "../../assets/img/photos/2025/131.jpg",
+        "thumb": "../../assets/img/photos/2025/thumbs/131.webp",
         "alt": "Фото с фестиваля современной культуры"
       },
       {
-        "full": "/img/photos/2025/132.jpg",
-        "thumb": "/img/photos/2025/thumbs/132.webp",
+        "full": "../../assets/img/photos/2025/132.jpg",
+        "thumb": "../../assets/img/photos/2025/thumbs/132.webp",
         "alt": "Фото с фестиваля современной культуры"
       },
       {
-        "full": "/img/photos/2025/133.jpg",
-        "thumb": "/img/photos/2025/thumbs/133.webp",
+        "full": "../../assets/img/photos/2025/133.jpg",
+        "thumb": "../../assets/img/photos/2025/thumbs/133.webp",
         "alt": "Фото с фестиваля современной культуры"
       },
       {
-        "full": "/img/photos/2025/134.jpg",
-        "thumb": "/img/photos/2025/thumbs/134.webp",
+        "full": "../../assets/img/photos/2025/134.jpg",
+        "thumb": "../../assets/img/photos/2025/thumbs/134.webp",
         "alt": "Фото с фестиваля современной культуры"
       },
       {
-        "full": "/img/photos/2025/135.jpg",
-        "thumb": "/img/photos/2025/thumbs/135.webp",
+        "full": "../../assets/img/photos/2025/135.jpg",
+        "thumb": "../../assets/img/photos/2025/thumbs/135.webp",
         "alt": "Фото с фестиваля современной культуры"
       },
       {
-        "full": "/img/photos/2025/136.jpg",
-        "thumb": "/img/photos/2025/thumbs/136.webp",
+        "full": "../../assets/img/photos/2025/136.jpg",
+        "thumb": "../../assets/img/photos/2025/thumbs/136.webp",
         "alt": "Фото с фестиваля современной культуры"
       },
       {
-        "full": "/img/photos/2025/137.jpg",
-        "thumb": "/img/photos/2025/thumbs/137.webp",
+        "full": "../../assets/img/photos/2025/137.jpg",
+        "thumb": "../../assets/img/photos/2025/thumbs/137.webp",
         "alt": "Фото с фестиваля современной культуры"
       },
       {
-        "full": "/img/photos/2025/138.jpg",
-        "thumb": "/img/photos/2025/thumbs/138.webp",
+        "full": "../../assets/img/photos/2025/138.jpg",
+        "thumb": "../../assets/img/photos/2025/thumbs/138.webp",
         "alt": "Фото с фестиваля современной культуры"
       },
       {
-        "full": "/img/photos/2025/139.jpg",
-        "thumb": "/img/photos/2025/thumbs/139.webp",
+        "full": "../../assets/img/photos/2025/139.jpg",
+        "thumb": "../../assets/img/photos/2025/thumbs/139.webp",
         "alt": "Фото с фестиваля современной культуры"
       }
     ]
@@ -941,25 +941,25 @@
       {
         "name": "Карина Саитова",
         "position": "Куратор фестиваля, руководитель студии керамики ИКЦ",
-        "photo": "/img/team/Саитова.webp",
+        "photo": "../../assets/img/team/Саитова.webp",
         "alt": "Саитова"
       },
       {
         "name": "Вячеслав Мельник",
         "position": "Дизайн и верстка сайта, seo фестиваля",
-        "photo": "/img/team/Мельник.webp",
+        "photo": "../../assets/img/team/Мельник.webp",
         "alt": "Мельник"
       },
       {
         "name": "Яна Егорова",
         "position": "Дизайнер, художник-модельер",
-        "photo": "/img/team/Егорова.webp",
+        "photo": "../../assets/img/team/Егорова.webp",
         "alt": "Егорова"
       },
       {
         "name": "Команда ИКЦ",
         "position": "",
-        "photo": "/img/team/икц.webp",
+        "photo": "../../assets/img/team/икц.webp",
         "alt": "Команда ИКЦ"
       }
     ]
