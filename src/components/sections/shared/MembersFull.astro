@@ -1,0 +1,34 @@
+---
+interface Person {
+  name: string;
+  position?: string;
+  photo: string;
+  alt: string;
+}
+interface Props {
+  data: { title: string; subtitle?: string; people: Person[] };
+}
+const { data } = Astro.props;
+---
+<section class="intro">
+  <div class="intro__container _container"></div>
+</section>
+<section class="team">
+  <div class="team__container _container">
+    <h2 class="team__title title">{data.title}</h2>
+    {data.subtitle && <div class="team__sub-title">{data.subtitle}</div>}
+    <div class="team__body">
+      {data.people.map(p => (
+        <div class="team__person person-team">
+          <div class="person-team__photo _ibg">
+            <img src={p.photo} alt={p.alt} />
+          </div>
+          <div class="person-team__info">
+            <div class="person-team__name">{p.name}</div>
+            <div class="person-team__position">{p.position || ''}</div>
+          </div>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>

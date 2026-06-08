@@ -1,3 +1,7 @@
 /node_modules/
 /ceramicfest/
 /.idea/*
+/docs/superpowers/plans/
+/dist/
+/.astro/
+.DS_Store

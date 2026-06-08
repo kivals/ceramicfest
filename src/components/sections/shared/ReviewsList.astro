@@ -1,0 +1,44 @@
+---
+interface Review { text: string; author: string; date: string; }
+interface Props {
+  data: {
+    introTitle?: string;
+    introText?: string;
+    pageTitle: string;
+    items: Review[];
+  };
+}
+const { data } = Astro.props;
+---
+<section class="intro">
+  <div class="intro__container _container"></div>
+</section>
+{data.introTitle && (
+  <>
+    <section class="philosophy" id="philosophy">
+      <div class="philosophy__container _container">
+        <h2 class="philosophy__title">{data.introTitle}</h2>
+        <div class="philosophy__text">{data.introText}</div>
+      </div>
+    </section>
+    <section class="divider">
+      <div class="divider__container _container">
+        <div class="divider__line"></div>
+      </div>
+    </section>
+  </>
+)}
+<section class="reviews">
+  <div class="reviews__container _container">
+    <h1 class="reviews__title title">{data.pageTitle}</h1>
+    <div class="reviews__body">
+      {data.items.map(r => (
+        <div class="reviews__item item-review">
+          <div class="item-review__text">{r.text}</div>
+          <div class="item-review__author">{r.author}</div>
+          <div class="item-review__date">{r.date}</div>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>

@@ -1,0 +1,13 @@
+---
+interface Props {
+  data: { title: string; description: string; embedUrl: string };
+}
+const { data } = Astro.props;
+---
+<section class="map" id="map">
+  <div class="map__container _container">
+    <h3 class="map__title title">{data.title}</h3>
+    <div class="map__description">{data.description}</div>
+    <iframe class="map__dest" src={data.embedUrl} frameborder="2"></iframe>
+  </div>
+</section>

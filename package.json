@@ -1,32 +1,23 @@
 {
-	"name": "fls_start_gulp",
-	"version": "1.0.0",
-	"description": "Start template with Gulp",
-	"author": "FLS",
-	"private": true,
-	"license": "GNU General Public License (GPL)",
-	"devDependencies": {
-		"browser-sync": "latest",
-		"del": "latest",
-		"gulp": "latest",
-		"gulp-autoprefixer": "latest",
-		"gulp-clean-css": "latest",
-		"gulp-file-include": "latest",
-		"gulp-fonter": "latest",
-		"gulp-group-css-media-queries": "latest",
-		"gulp-imagemin": "latest",
-		"gulp-newer": "latest",
-		"gulp-plumber": "latest",
-		"gulp-rename": "latest",
-		"gulp-sass": "latest",
-		"gulp-ttf2woff": "latest",
-		"gulp-ttf2woff2": "latest",
-		"gulp-uglify-es": "latest",
-		"gulp-webp-html": "latest",
-		"gulp-webpcss": "latest",
-		"imagemin-webp": "6.0.0",
-		"sass": "latest",
-		"transform-runtime": "0.0.0",
-		"webp-converter": "2.2.3"
-	}
+  "name": "ceramicfest",
+  "version": "1.0.0",
+  "description": "Static promo site for Mlechny Put ceramic festival, built with Astro",
+  "author": "kivals",
+  "private": true,
+  "license": "GNU General Public License (GPL)",
+  "scripts": {
+    "img": "node scripts/img-convert.js",
+    "img:bw": "node scripts/img-convert.js --grayscale",
+    "dev": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "check": "astro check"
+  },
+  "devDependencies": {
+    "@astrojs/check": "^0.9.9",
+    "astro": "^5.18.2",
+    "sass": "^1.100.0",
+    "sharp": "^0.34.5",
+    "typescript": "^5.9.3"
+  }
 }

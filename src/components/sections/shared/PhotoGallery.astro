@@ -1,0 +1,56 @@
+---
+interface Props {
+  data: {
+    introText?: string;
+    vimeoIds?: string[];
+    folder: string;
+    photos: { full: string; thumb: string; alt: string }[];
+  };
+}
+const { data } = Astro.props;
+---
+<section class="intro">
+  <div class="intro__container _container"></div>
+</section>
+
+{data.vimeoIds && data.vimeoIds.length > 0 && (
+  <section class="fest-video">
+    {data.vimeoIds.map(id => (
+      <>
+        <div class="fest-video__container _container">
+          <div style="padding:56.25% 0 0 0;position:relative;">
+            <iframe src={`//player.vimeo.com/video/${id}?title=0&byline=0&portrait=0&badge=0&color=ffffff`}
+                    frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen
+                    style="position:absolute;top:0;left:0;width:100%;height:100%;"
+                    title="ceramicfest video"></iframe>
+          </div>
+        </div>
+        <br />
+      </>
+    ))}
+  </section>
+)}
+
+<section class="photos">
+  <div class="photos__container _gallery">
+    {data.photos.map(p => (
+      <a href={p.full} class="photos__image _ibg">
+        <img src={p.thumb} alt={p.alt} loading="lazy" />
+      </a>
+    ))}
+  </div>
+</section>
+
+<script is:inline src="https://player.vimeo.com/api/player.js"></script>
+<script is:inline src="/js/lightgallery.min.js"></script>
+<script is:inline>
+  document.addEventListener('DOMContentLoaded', () => {
+    document.querySelectorAll('._gallery').forEach((el) => {
+      window.lightGallery(el, {
+        counter: false,
+        selector: 'a',
+        download: false,
+      });
+    });
+  });
+</script>
