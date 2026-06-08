@@ -1,5 +1,6 @@
 ---
-import { loadMembersSplit } from '../../../lib/members';
+import { Image } from 'astro:assets';
+import { loadMembersSplit, type Member } from '../../../lib/members';
 
 interface Props {
   data: { title: string; dataFile: string; previewCount: number; moreButtonLabel: string };
@@ -13,7 +14,7 @@ const { main, additional } = await loadMembersSplit(data.dataFile, data.previewC
       <h3 class="members__title title">{data.title}</h3>
       <div class="members__list">
         <div class="members__part members__part_main">
-          {main.map(m => (
+          {main.map((m: Member) => (
             <div class="members__item item-member">
               <div class="item-member__body">
                 <div class="item-member__header">
@@ -21,7 +22,7 @@ const { main, additional } = await loadMembersSplit(data.dataFile, data.previewC
                   <div class="item-member__position"></div>
                 </div>
                 <div class="item-member__photo _ibg">
-                  <img src={m.photo} alt={m.altText} />
+                  <Image src={m.photo} alt={m.altText} widths={[300, 500, 700]} sizes="(max-width: 768px) 90vw, 400px" loading="eager" />
                 </div>
                 <div class="item-member__description description-member">
                   <div class="description-member__part" set:html={m.description}></div>
@@ -35,7 +36,7 @@ const { main, additional } = await loadMembersSplit(data.dataFile, data.previewC
           ))}
         </div>
         <div class="members__part members__part_additional">
-          {additional.map(m => (
+          {additional.map((m: Member) => (
             <div class="members__item item-member">
               <div class="item-member__body">
                 <div class="item-member__header">
@@ -43,7 +44,7 @@ const { main, additional } = await loadMembersSplit(data.dataFile, data.previewC
                   <div class="item-member__position"></div>
                 </div>
                 <div class="item-member__photo _ibg">
-                  <img src={m.photo} alt={m.altText} />
+                  <Image src={m.photo} alt={m.altText} widths={[300, 500, 700]} sizes="(max-width: 768px) 90vw, 400px" loading="lazy" />
                 </div>
                 <div class="item-member__description description-member">
                   <div class="description-member__part" set:html={m.description}></div>

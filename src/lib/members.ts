@@ -1,26 +1,17 @@
-import fs from 'node:fs/promises';
-import path from 'node:path';
+import { getEntry, type CollectionEntry } from 'astro:content';
 
-export interface Member {
-  id: number;
-  name: string;
-  position?: string;
-  photo: string;
-  altText: string;
-  description: string;
-  additionalDescription: string;
-}
-
-const CONTENT_ROOT = path.join(process.cwd(), 'src', 'content');
+export type Member = CollectionEntry<'members'>['data']['members'][number];
 
 /**
- * Загружает список участников из указанного файла и делит на preview/additional.
+ * Loads members collection entry and splits into preview/additional.
+ * `slug` is the collection entry id (e.g. "2026" for members/2026.json).
  */
-export async function loadMembersSplit(dataFile: string, previewCount: number) {
-  const fullPath = path.join(CONTENT_ROOT, dataFile);
-  const raw = await fs.readFile(fullPath, 'utf8');
-  const parsed = JSON.parse(raw) as { members: Member[] };
-  const all = parsed.members || [];
+export async function loadMembersSplit(slug: string, previewCount: number) {
+  const entry = await getEntry('members', slug);
+  if (!entry) {
+    throw new Error(`Members entry "${slug}" not found in src/content/members/`);
+  }
+  const all = entry.data.members;
   return {
     main: all.slice(0, previewCount),
     additional: all.slice(previewCount),

@@ -1,8 +1,11 @@
 ---
+import { Image } from 'astro:assets';
+import type { ImageMetadata } from 'astro';
+
 interface Person {
   name: string;
   position?: string;
-  photo: string;
+  photo: ImageMetadata;
   alt: string;
 }
 interface Props {
@@ -21,7 +24,7 @@ const { data } = Astro.props;
       {data.people.map(p => (
         <div class="team__person person-team">
           <div class="person-team__photo _ibg">
-            <img src={p.photo} alt={p.alt} />
+            <Image src={p.photo} alt={p.alt} width={450} loading="lazy" />
           </div>
           <div class="person-team__info">
             <div class="person-team__name">{p.name}</div>

@@ -1,6 +1,9 @@
 ---
+import { Image } from 'astro:assets';
+import type { ImageMetadata } from 'astro';
+
 interface Props {
-  data: { title: string; items: { url: string; logo: string; alt: string }[] };
+  data: { title: string; items: { url: string; logo: ImageMetadata; alt: string }[] };
 }
 const { data } = Astro.props;
 ---
@@ -10,7 +13,7 @@ const { data } = Astro.props;
     <div class="aboutus__content">
       {data.items.map(item => (
         <a href={item.url} class="aboutus__smi" target="_blank" rel="noopener">
-          <img src={item.logo} alt={item.alt} />
+          <Image src={item.logo} alt={item.alt} width={240} loading="lazy" />
         </a>
       ))}
     </div>

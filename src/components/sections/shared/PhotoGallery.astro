@@ -1,13 +1,20 @@
 ---
+import { Image, getImage } from 'astro:assets';
+import type { ImageMetadata } from 'astro';
+
 interface Props {
   data: {
     introText?: string;
     vimeoIds?: string[];
     folder: string;
-    photos: { full: string; thumb: string; alt: string }[];
+    photos: { full: ImageMetadata; thumb: ImageMetadata; alt: string }[];
   };
 }
 const { data } = Astro.props;
+
+const fullImages = await Promise.all(
+  data.photos.map(p => getImage({ src: p.full, format: 'webp', width: 1920, quality: 82 }))
+);
 ---
 <section class="intro">
   <div class="intro__container _container"></div>
@@ -33,9 +40,9 @@ const { data } = Astro.props;
 
 <section class="photos">
   <div class="photos__container _gallery">
-    {data.photos.map(p => (
-      <a href={p.full} class="photos__image _ibg">
-        <img src={p.thumb} alt={p.alt} loading="lazy" />
+    {data.photos.map((p, i) => (
+      <a href={fullImages[i].src} class="photos__image _ibg">
+        <Image src={p.thumb} alt={p.alt} loading="lazy" />
       </a>
     ))}
   </div>
