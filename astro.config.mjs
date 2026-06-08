@@ -4,7 +4,7 @@ export default defineConfig({
   outDir: './dist',
   publicDir: './public',
   srcDir: './src',
-  site: 'https://example.com',  // заменить на реальный домен позже
+  site: 'https://ceramicfest.ru',
   build: {
     assets: 'assets',
   },
