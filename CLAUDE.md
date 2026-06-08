@@ -4,8 +4,9 @@
 
 Статический промо-сайт ежегодного Международного фестиваля современной керамики «Млечный путь» (г. Калуга). Сайт обновляется раз в год: под каждый сезон создаётся отдельная ветка git и обновляются контент, фото и программа.
 
-Текущий сезон: **2026**, выставка «Вне Земли». Основная ветка: `main`.
-Сайт мигрирован с Gulp на Astro: Phase 1 (текущий сезон) завершена в ветке `astro-migration`, Phase 2 (архивы 2021–2025 через set:html shortcut) — в ветке `phase2-archive-2021`.
+Текущий сезон: **2026**, выставка «Вне Земли». Основная ветка: `main`. Сайт мигрирован с Gulp на Astro: текущий сезон и архивы 2021–2025 (через `set:html` shortcut) живут в `main`.
+
+**Деплой:** Vercel, production branch `main`. Конфиг авто-детект Astro: `npm run build` → `dist/`, никакого adapter'а — чистая статика.
 
 **Страницы:**
 
@@ -118,6 +119,6 @@ astro.config.mjs        ← конфиг Astro
 }
 ```
 
-**Новый сезон** — создать ветку от `main`, обновить `src/content/seasons/{year}.json`, `src/content/members/{year}.json`, фото в `public/img/`, создать `Year{N}Layout.astro` и `src/styles/years/{year}.scss`. Ветки по годам: `2021`, `2022`, `2022_2`, `2023`, `2024`, `2025`, `2026`.
+**Новый сезон** — создать ветку от `main`, обновить `CURRENT_SEASON` в `src/config.ts`, добавить `src/content/seasons/{year}.json`, `src/content/members/{year}.json`, фото в `public/img/`, создать `Year{N}Layout.astro` и `src/styles/years/{year}.scss`. Ветки по годам: `2021`, `2022`, `2022_2`, `2023`, `2024`, `2025`, `2026`.
 
 **По окончании сезона** — добавить год в `ARCHIVE_YEARS` (`src/config.ts`), извлечь `<body>` свежесобранного сайта в `src/legacy/{year}/*.body.html` (см. формат соседних архивов: переписать `./img/` → `/{year}/img/`, `*.html` → `/{path}/`), добавить заголовки в `src/legacy/titles.json`. Маршруты `/{year}/*` появятся автоматически через `[year]/[...slug].astro`. Если планируется полный порт в JSON/компоненты — см. `docs/superpowers/plans/2026-06-06-phase2-archive-2021-design.md`.
