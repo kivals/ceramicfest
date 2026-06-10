@@ -39,6 +39,11 @@ const seasons = defineCollection({
         date: z.string(),
         location: z.string().optional(),
         events: z.array(z.object({ html: z.string() })),
+        images: z.array(z.object({
+          src: image(),
+          alt: z.string(),
+          ratio: z.enum(['pb100', 'pb140', 'pb177']).optional(),
+        })).optional(),
       })).optional(),
     }).optional(),
     partners: z.object({
