@@ -1,10 +1,18 @@
 ---
+import { Image } from 'astro:assets';
+import type { ImageMetadata } from 'astro';
+
 interface Props {
   data: {
     title: string;
     status: 'placeholder' | 'announced';
     placeholderText?: string;
-    days?: { date: string; location?: string; events: { html: string }[] }[];
+    days?: {
+      date: string;
+      location?: string;
+      events: { html: string }[];
+      images?: { src: ImageMetadata; alt: string; ratio?: 'pb100' | 'pb140' | 'pb177' }[];
+    }[];
   };
 }
 const { data } = Astro.props;
@@ -32,6 +40,17 @@ const { data } = Astro.props;
             {day.location && <div class="billboard__title">Локация: {day.location}</div>}
           </div>
           <div class="billboard__content">
+            {day.images && day.images.length > 0 && (
+              <div class="billboard__images">
+                {day.images.map(img => (
+                  <div class={`billboard__image-item _ibg ${img.ratio ?? 'pb140'}`}>
+                    <div class="billboard__overlay"></div>
+                    <button class="billboard__button _icon-search"></button>
+                    <Image src={img.src} alt={img.alt} />
+                  </div>
+                ))}
+              </div>
+            )}
             <div class="billboard__program">
               {day.events.map(ev => <p set:html={ev.html}></p>)}
             </div>
