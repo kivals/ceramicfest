@@ -550,7 +550,11 @@
     }
     img {
       max-width: 90%;
+      max-height: 90%;
+      width: auto;
+      height: auto;
       margin: 0 auto;
+      object-fit: contain;
     }
   }
 }
