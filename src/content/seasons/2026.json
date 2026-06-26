@@ -294,6 +294,7 @@
   },
   "photoGallery": {
     "folder": "../../assets/img/photos/2026/",
+    "vimeoIds": ["1204634061"],
     "photos": [
       {
         "full": "../../assets/img/photos/2026/1.webp",
